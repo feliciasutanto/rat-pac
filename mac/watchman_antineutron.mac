@@ -29,4 +29,4 @@
 #/generator/vtx/set e-  0 0 0 0 5.0 5.0
 #/generator/pos/set target
 
-/run/beamOn 2
+/run/beamOn 10

@@ -1,3 +1,8 @@
+// Extract the tracks from a file using root command prompts
+// example of use. The command
+// >  root trackExtraction.C\(\"/Users/marcbergevin/RAT_ROOT/output.root\"\)
+// Will apply this routine of the output.root file
+// M.B
 #include <iostream>
 #include <iomanip>
 #include <TROOT.h>
