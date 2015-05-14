@@ -20,11 +20,11 @@ void trackExtraction(const char *file) {
     int nEvents = tree->GetEntries();
     
     for (int i = 0; i < nEvents; i++) {
-
+        
         tree->GetEntry(i);
         RAT::DS::MC *mc = rds->GetMC();
         RAT::DS::MCParticle *prim = mc->GetMCParticle(0);
- 
+        
         printf("MC PE     : %8.0f\n", mc->GetNumPE());
         printf("MC PMT Cnt: %8.0f\n", mc->GetMCPMTCount());
         printf("MC Trk Cnt: %8.0f\n", mc->GetMCTrackCount());
@@ -33,5 +33,31 @@ void trackExtraction(const char *file) {
         printf("position  : %8.2f %8.2f %8.2f\n", prim->GetPosition().X(), prim->GetPosition().Y(), prim->GetPosition().Z());
         printf("momentum  : %8.3f %8.3f %8.3f\n\n", prim->GetMomentum().X(), prim->GetMomentum().Y(), prim->GetMomentum().Z());
         
+        
+        int nTracks = mc->GetMCTrackCount();
+        
+        //        Particle *trackmap = new Particle[nTracks+1];
+        for (int j = 0; j < nTracks; j++) {
+            RAT::DS::MCTrack *track = mc->GetMCTrack(j);
+            int tid = track->GetID();
+            int pid = track->GetParentID();
+            
+            RAT::DS::MCTrackStep *first = track->GetMCTrackStep(0);
+            RAT::DS::MCTrackStep *last = track->GetLastMCTrackStep();
+            
+            if((track->GetParticleName() != "opticalphoton" ) ){
+                if(!((last->GetProcess()=="eIoni")||(last->GetProcess()=="hIoni"))){//
+                    if (first->GetProcess() != "eBrem"){
+                        printf("%7d  %7d/%7d %s\nFirst: %s\nLast: %s\n",i,j,nTracks,track->GetParticleName(),first->GetProcess(),last->GetProcess());
+                    }
+                }
+            }// if((track->GetParticleName() != "opticalphoton" ) ){
+            int nSteps = track->GetMCTrackStepCount();
+            TVector3 *steps = new TVector3[nSteps];
+            for (int k = 0; k < nSteps; k++) {
+                steps[k] = track->GetMCTrackStep(k)->GetEndpoint();
+            }//for (int k = 0; k < nSteps; k++)
+            
+        }//for (int j = 0; j < nTracks; j++) {
     }
 }
