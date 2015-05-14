@@ -1,3 +1,6 @@
+/tracking/storeTrajectory 1
+/tracking/storeParticleTrajectory 1
+
 /glg4debug/glg4param omit_muon_processes  0.0
 /glg4debug/glg4param omit_hadronic_processes  0.0
 
@@ -15,6 +18,7 @@
 
 # Use IO.default_output_filename
 /rat/proclast outroot
+/rat/procset file "~/RAT_ROOT/anti_neutron_wbls10pct.root"
 #END EVENT LOOP
 
 /generator/add combo gun2:fill
