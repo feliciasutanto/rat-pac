@@ -18,7 +18,7 @@
 #END EVENT LOOP
 
 /generator/add combo gun2:fill
-/generator/vtx/set antineutron  0 0 0 0 0.0 0.0
+/generator/vtx/set anti_neutron  0 0 0 0 0.0 0.0
 /generator/pos/set 0 0 0
 
 #/generator/add combo gun2:fill
