@@ -20,7 +20,7 @@
 
 # Use IO.default_output_filename
 /rat/proclast outroot
-/rat/procset file "~/RAT_ROOT/anti_neutron_wbls10pct.root"
+/rat/procset file "~/RAT_ROOT/anti_neutron_wbls10pct_noOP.root"
 #END EVENT LOOP
 
 /generator/add combo gun2:fill
