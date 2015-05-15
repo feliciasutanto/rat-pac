@@ -232,7 +232,7 @@ SetState(G4String newValues)
 	  break;
       if (Z <= numberOfElements)
 	newTestGunG4Code=
-	  G4ParticleTable::GetParticleTable()->GetIon(Z, A, 0.0);
+	  G4IonTable::GetIonTable()->GetIon(Z, A, 0.0);
     }
     if (newTestGunG4Code == NULL) {
       G4cerr << "test gun particle type not changed! Could not"
@@ -507,7 +507,7 @@ SetState(G4String newValues)
 	  break;
       if (Z <= numberOfElements)
 	newTestGunG4Code=
-	  G4ParticleTable::GetParticleTable()->GetIon(Z, A, 0.0);
+	  G4IonTable::GetIonTable()->GetIon(Z, A, 0.0);
     }
     if (newTestGunG4Code == NULL) {
       G4cerr << "test gun particle type not changed! Could not"
@@ -883,7 +883,7 @@ GeneratePrimaryVertex(G4Event *argEvent, G4ThreeVector &dx, G4double dt)
       int A= IDHEP%1000;
       int Z= (IDHEP/1000)%100;
       G4ParticleDefinition * g4code =
-	G4ParticleTable::GetParticleTable()->GetIon(Z, A, 0.0);
+	G4IonTable::GetIonTable()->GetIon(Z, A, 0.0);
       if (g4code == 0) {
 	G4cerr << "Warning: GLG4HEPEvt could not find Ion Z=" << Z
 	       << " A=" << A << " code=" << IDHEP << G4endl;
