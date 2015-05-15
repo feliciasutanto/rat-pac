@@ -230,13 +230,13 @@ DBLinkPtr DB::GetLink(std::string tblname, std::string index)
 }
 
 
-DBLinkPtr DB::GetLink(std::string tblname, std::string index, int _run)
+DBLinkPtr DB::GetLink(std::string tblname, std::string index, int run)
 {
-  debug << dformat("DB::GetLink(%s,%s, run=%d)\n", tblname.c_str(), index.c_str(), _run);
+  debug << dformat("DB::GetLink(%s,%s, run=%d)\n", tblname.c_str(), index.c_str(), run);
 
   // By using smart pointer here, user does not have to worry about
   // memory management
-  DBLink *real_ptr = new DBLink(this, tblname, index, _run);
+  DBLink *real_ptr = new DBLink(this, tblname, index, run);
   links.push_back(real_ptr);
   return DBLinkPtr(real_ptr);
 }
@@ -262,7 +262,6 @@ DBLinkGroup DB::GetLinkGroup(std::string tblname)
                               server.c_str(), tblname.c_str(), tblname.c_str());
     std::string contents = downloader.Fetch(url);
 
-<<<<<<< HEAD
     json::Reader reader(contents);
     json::Value results;
     try {
@@ -273,15 +272,6 @@ DBLinkGroup DB::GetLinkGroup(std::string tblname)
     json::Value rows = results["rows"];
     for (unsigned i=0; i < rows.getArraySize(); i++) {
       json::Value row = rows[i]["key"];
-=======
-    Json::Reader reader;
-    Json::Value results;
-    Log::Assert(reader.parse(contents, results, false),
-                "RATDB: Could not parse JSON response when building DBLink group.");
-    Json::Value rows = results["rows"];
-    for (unsigned idx=0; idx < rows.size(); idx++) {
-      Json::Value row = rows[idx]["key"];
->>>>>>> 5157b02efe63f695ab2910e73620d4804fd01565
       // Key is a two element array, with index in entry 1
       std::string index = row[1].cast<string>();
       if (group.count(index) == 0)
@@ -396,7 +386,6 @@ DBTable *DB::FindTable(std::string tblname, std::string index, int runNumber)
   
   // 4) Grab fields from attachments if present
   if (jsonDoc.isMember("_attachments")) {
-<<<<<<< HEAD
     std::string id = jsonDoc["_id"].cast<string>();
     json::Value attachments = jsonDoc["_attachments"];
     std::vector<std::string> fieldnames = attachments.getMembers();
@@ -406,14 +395,6 @@ DBTable *DB::FindTable(std::string tblname, std::string index, int runNumber)
       //url = dformat("%s/%s/%s", server.c_str(), id.c_str(), fieldname.c_str());
       //      contents = downloader.Fetch(url);
       std::string content_type = attachments[fieldname]["content_type"].cast<string>();
-=======
-    Json::Value attachments = jsonDoc["_attachments"];
-    std::vector<std::string> fieldnames = attachments.getMemberNames();
-    for (unsigned idx=0; idx < fieldnames.size(); idx++) {
-      // Fetch attachment
-      const std::string &fieldname = fieldnames[idx];
-      std::string content_type = attachments[fieldname]["content_type"].asString();
->>>>>>> 5157b02efe63f695ab2910e73620d4804fd01565
             
       if (content_type == "vnd.rat/array-double") {
         newTable->SetDArrayDeferred(fieldname, this);

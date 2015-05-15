@@ -8,7 +8,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <RAT/Log.hh>
-#include <RAT/json.hh>
+#include <RAT/json_reader.hh>
 #include <Byteswap.h> // From ROOT 
 #include <TPython.h>
 
@@ -195,18 +195,15 @@ void DB::SetServer(std::string url)
   // Fetch list of names of tables on the server so we can avoid querying it for tables it does not store
   std::string name_url = dformat("%s/_design/ratdb/_view/name?group=true", server.c_str());
   std::string contents = downloader.Fetch(name_url);
-  json::Reader reader(contents);
-  json::Value results;
-  try {
-    reader.getValue(results);
-  } catch (...) {
-    Log::Die("RATDB: Could not parse JSON response of table name query to server.");
-  }
+  Json::Reader reader;
+  Json::Value results;
+  Log::Assert(reader.parse(contents, results, false), 
+              "RATDB: Could not parse JSON response of table name query to server.");
   
   info << "RATDB: Tables on server include";
-  json::Value rows = results["rows"];
-  for (unsigned i=0; i < rows.getArraySize(); i++) {
-    std::string key = rows[i]["key"].cast<string>();
+  Json::Value rows = results["rows"];
+  for (unsigned i=0; i < rows.size(); i++) {
+    std::string key = rows[i]["key"].asString();
     tableNamesOnServer.insert(key);
     info << " " << key;
   }
@@ -262,18 +259,6 @@ DBLinkGroup DB::GetLinkGroup(std::string tblname)
                               server.c_str(), tblname.c_str(), tblname.c_str());
     std::string contents = downloader.Fetch(url);
 
-<<<<<<< HEAD
-    json::Reader reader(contents);
-    json::Value results;
-    try {
-      reader.getValue(results);
-    } catch (...) {
-      Log::Die("RATDB: Could not parse JSON response when building DBLink group.");
-    }
-    json::Value rows = results["rows"];
-    for (unsigned i=0; i < rows.getArraySize(); i++) {
-      json::Value row = rows[i]["key"];
-=======
     Json::Reader reader;
     Json::Value results;
     Log::Assert(reader.parse(contents, results, false),
@@ -281,9 +266,8 @@ DBLinkGroup DB::GetLinkGroup(std::string tblname)
     Json::Value rows = results["rows"];
     for (unsigned idx=0; idx < rows.size(); idx++) {
       Json::Value row = rows[idx]["key"];
->>>>>>> 5157b02efe63f695ab2910e73620d4804fd01565
       // Key is a two element array, with index in entry 1
-      std::string index = row[1].cast<string>();
+      std::string index = row[1].asString();
       if (group.count(index) == 0)
         group[index] = GetLink(tblname, index);
     }
@@ -371,49 +355,35 @@ DBTable *DB::FindTable(std::string tblname, std::string index, int runNumber)
   std::string contents = downloader.Fetch(url);
   
   // 2) Parse JSON document
-  json::Reader reader(contents);
-  json::Value query;
-  try {
-    reader.getValue(query);
-  } catch (...) {
-    Log::Die("RATDB: Could not parse JSON response from server.");
-  }
+  Json::Reader reader;
+  Json::Value query;
+  //warn << contents.str();
+  Log::Assert(reader.parse(contents, query, false), 
+              "RATDB: Could not parse JSON response from server.");
               
   // 3) Copy the fields into a RATDB table
-  Log::Assert(query.getType() == json::TOBJECT, "RATDB:: Server returned non-object JSON document.");
+  Log::Assert(query.isObject(), "RATDB:: Server returned non-object JSON document.");
   
-  if (query["rows"].getArraySize() == 0) { // Did not find any matching tables on the server
+  if (query["rows"].size() == 0) { // Did not find any matching tables on the server
     tablesNotOnServer.insert(id); // Remember this result for later
     return 0;
   }
     
-  if (query["rows"].getArraySize() > 1) // Multiple documents?
+  if (query["rows"].size() > 1) // Multiple documents?
     Log::Die("RATDB: Multiple documents on server for this run.  Aborting!");
     
-  json::Value jsonDoc = query["rows"][(unsigned) 0]["doc"];
+  Json::Value jsonDoc = query["rows"][(unsigned) 0]["doc"];
   
   DBTable *newTable = DBJsonLoader::convertTable(jsonDoc);
   
   // 4) Grab fields from attachments if present
   if (jsonDoc.isMember("_attachments")) {
-<<<<<<< HEAD
-    std::string id = jsonDoc["_id"].cast<string>();
-    json::Value attachments = jsonDoc["_attachments"];
-    std::vector<std::string> fieldnames = attachments.getMembers();
-    for (unsigned i=0; i < fieldnames.size(); i++) {
-      // Fetch attachment
-      const std::string &fieldname = fieldnames[i];
-      //url = dformat("%s/%s/%s", server.c_str(), id.c_str(), fieldname.c_str());
-      //      contents = downloader.Fetch(url);
-      std::string content_type = attachments[fieldname]["content_type"].cast<string>();
-=======
     Json::Value attachments = jsonDoc["_attachments"];
     std::vector<std::string> fieldnames = attachments.getMemberNames();
     for (unsigned idx=0; idx < fieldnames.size(); idx++) {
       // Fetch attachment
       const std::string &fieldname = fieldnames[idx];
       std::string content_type = attachments[fieldname]["content_type"].asString();
->>>>>>> 5157b02efe63f695ab2910e73620d4804fd01565
             
       if (content_type == "vnd.rat/array-double") {
         newTable->SetDArrayDeferred(fieldname, this);
@@ -566,7 +536,11 @@ std::vector<DBTable *> DB::ReadRATDBFile(const std::string &filename)
 {
   std::vector<DBTable *> contents;
   
-  contents = DBJsonLoader::parse(filename);
+  try {
+    contents = DBTextLoader::parse(filename);
+  } catch (ProbablyJSONParseError &e) {
+    contents = DBJsonLoader::parse(filename);
+  }
   
   return contents;
 }
