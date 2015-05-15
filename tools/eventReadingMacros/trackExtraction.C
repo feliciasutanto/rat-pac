@@ -46,10 +46,10 @@ void trackExtraction(const char *file) {
             RAT::DS::MCTrackStep *last = track->GetLastMCTrackStep();
             
             if((track->GetParticleName() != "opticalphoton" ) ){
-                if(!((last->GetProcess()=="eIoni")||(last->GetProcess()=="hIoni"))){//
-                    if (first->GetProcess() != "eBrem"){
-                        printf("%7d  %7d/%7d %s\nFirst: %s\nLast: %s\n",i,j,nTracks,track->GetParticleName(),first->GetProcess(),last->GetProcess());
-                    }
+                if(first->ke>1.0){//!((last->GetProcess()=="eIoni")||(last->GetProcess()=="hIoni"))){//
+//                    if (first->GetProcess() != "eBrem"){
+                    printf("%7d  %7d/%7d %10d %8.3f %10.3f\n",i,j,nTracks,track->pdgcode, first->ke,first->globalTime);//,first->GetProcess(),last->GetProcess(),track->GetParticleName());//printf("%7d  %7d/%7d %10d %8.3f\nFirst: %s\nLast: %s\n"
+//                    }
                 }
             }// if((track->GetParticleName() != "opticalphoton" ) ){
             int nSteps = track->GetMCTrackStepCount();
