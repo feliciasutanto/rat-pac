@@ -1,0 +1,30 @@
+/tracking/storeTrajectory 1
+/tracking/storeParticleTrajectory 1
+
+/glg4debug/glg4param omit_muon_processes  0.0
+/glg4debug/glg4param omit_hadronic_processes  0.0
+
+/rat/db/set DETECTOR experiment "Watchman" 
+/rat/db/set DETECTOR geo_file "Watchman/Watchman.geo"
+
+/run/initialize
+
+# BEGIN EVENT LOOP
+/rat/proc simpledaq
+#/rat/proc fitbonsai
+#/rat/proc fitcentroid
+/rat/proc count
+/rat/procset update 1
+#/rat/proc prune
+#/rat/procset prune "mc.track:opticalphoton"
+
+# Use IO.default_output_filename
+/rat/proclast outroot
+/rat/procset file "~/RAT_ROOT/neutron_5_Gd.root"
+#END EVENT LOOP
+
+/generator/add combo gun2:fill
+/generator/vtx/set neutron  0 0 0 0 0.10 0.10
+/generator/pos/set 0 0 0
+
+/run/beamOn 500

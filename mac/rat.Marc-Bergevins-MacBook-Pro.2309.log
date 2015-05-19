@@ -1,0 +1,1258 @@
+RAT, version 0eae2da
+Status messages enabled: info detail 
+Hostname: Marc-Bergevins-MacBook-Pro.local PID: 2309
+Seeding random number generator: 1549732652
+DB: Loading /Users/marcbergevin/rat-pac/data/DAQ.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/DETECTOR.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/ELEMENTS.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/IBD.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/IO.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/MATERIALS.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/MC.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/NOISE.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/NTUPLE.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/OPTICS.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/PMT.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/PMTCHARGE.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/PMTTRANSIT.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/RUN.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/SPECTRUM.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/WIMP.ratdb ... Success!
+
+*************************************************************
+ Geant4 version Name: geant4-09-06-patch-04    (30-January-2015)
+                      Copyright : Geant4 Collaboration
+                      Reference : NIM A 506 (2003), 250-303
+                            WWW : http://cern.ch/geant4
+*************************************************************
+
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Current available graphics systems are:
+  ASCIITree (ATree)
+  DAWNFILE (DAWNFILE)
+  G4HepRep (HepRepXML)
+  G4HepRepFile (HepRepFile)
+  RayTracer (RayTracer)
+  VRML1FILE (VRML1FILE)
+  VRML2FILE (VRML2FILE)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByCharge
+  drawByParticleID
+  drawByOriginVolume
+  drawByAttribute
+
+Registered filter factories:
+  chargeFilter
+  particleFilter
+  originVolumeFilter
+  attributeFilter
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+Available colours:
+  black, blue, brown, cyan, gray, green, grey, magenta, red, white, yellow
+
+Tracking: storing trajectory information for 1
+DB: Setting DETECTOR[] experiment to Watchman
+DB: Setting DETECTOR[] geo_file to Watchman/Watchman.geo
+Loading experiment-specific RATDB files for: Watchman
+DB: Loading /Users/marcbergevin/rat-pac/data/Watchman/FTP.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/Watchman/MATERIALS_Watchman.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/Watchman/PMTINFO.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/Watchman/SURFACES_Watchman.ratdb ... Success!
+DB: Loading /Users/marcbergevin/rat-pac/data/Watchman/WATCHMAN_PARAMS.ratdb ... Success!
+Loading detector geometry from Watchman/Watchman.geo
+Constructing detector materials...
+Loaded material: [AR_coating]
+Loaded material: [C15H24_lab]
+Loaded material: [C16H26_lab]
+Loaded material: [C17H28_lab]
+Loaded material: [C18H30_lab]
+Loaded material: [C19H32_lab]
+Loaded material: [MgF2]
+Loaded material: [NaI]
+Loaded material: [Prelude]
+Loaded material: [SNOnorite]
+Loaded material: [TiO2]
+Loaded material: [ZnO2]
+Loaded material: [acrylic_SpartechSheet]
+Loaded material: [acrylic_black]
+Loaded material: [acrylic_polycast]
+Loaded material: [acrylic_rpt]
+Loaded material: [acrylic_suvt]
+Loaded material: [acrylic_uva_McMaster]
+Loaded material: [acrylic_uvt]
+Loaded material: [acrylic_uvt_RPT]
+Loaded material: [acrylic_uvt_good]
+Loaded material: [acrylic_white]
+Loaded material: [air]
+Loaded material: [aluminum]
+Loaded material: [black_water]
+Loaded material: [borosilicate_glass]
+Loaded material: [cardboard]
+Loaded material: [concrete]
+Loaded material: [concrete_chess]
+Loaded material: [concrete_kaplan]
+Loaded material: [concrete_mcnp]
+Loaded material: [copper]
+Loaded material: [cryostat_vacuum]
+Loaded material: [dead_liquid_Ar]
+Loaded material: [dead_liquid_He]
+Loaded material: [dead_liquid_Ne]
+Loaded material: [dead_liquid_Xe]
+Loaded material: [delrin]
+Loaded material: [dodecane]
+Loaded material: [doped_water]
+G4Material::GetMaterial() WARNING: The material: water does not exist in the table. Return NULL pointer.
+[doped_water] thrown on construction queue
+Loaded material: [finemet]
+Loaded material: [gadolinium]
+Loaded material: [gd_scintillator]
+G4Material::GetMaterial() WARNING: The material: mineral_oil does not exist in the table. Return NULL pointer.
+[gd_scintillator] thrown on construction queue
+Loaded material: [glass]
+Loaded material: [hamamatsu_borosilicate_glass]
+Loaded material: [kevlar]
+Loaded material: [lab]
+Loaded material: [lead]
+Loaded material: [liquid_Ar]
+Loaded material: [liquid_He]
+Loaded material: [liquid_Ne]
+Loaded material: [liquid_Xe]
+Loaded material: [mineral_oil]
+Loaded material: [mirror]
+Loaded material: [nylon]
+Loaded material: [optical_grease]
+Loaded material: [pen]
+Loaded material: [pet]
+Loaded material: [photocathode]
+Loaded material: [photocathode_R11065]
+Loaded material: [photocathode_R11780]
+Loaded material: [photocathode_R1408]
+Loaded material: [photocathode_R5912_HQE]
+Loaded material: [photocathode_R7081_hqe]
+Loaded material: [photocathode_et9390b]
+Loaded material: [pmt_vacuum]
+Loaded material: [polypropylene]
+Loaded material: [polystyrene_foam]
+Loaded material: [ppo]
+Loaded material: [pseudocumene]
+Loaded material: [ptfe]
+Loaded material: [ptfe_fabric]
+Loaded material: [pvc]
+Loaded material: [quartz]
+Loaded material: [rock]
+Loaded material: [salt_water]
+Loaded material: [sapphire]
+Loaded material: [scintillator]
+Loaded material: [stainless_steel]
+Loaded material: [stainless_steel_316L]
+Loaded material: [steel]
+Loaded material: [styrofoam]
+Loaded material: [tungsten]
+Loaded material: [tungsten_alloy]
+Loaded material: [tyvek]
+Loaded material: [vikuiti_esr]
+Loaded material: [water]
+Loaded material: [wbls_10pct]
+Loaded material: [wbls_10pct_Gd]
+Loaded material: [wbls_5pct]
+Loaded material: [wbls_5pct_Gd]
+Loaded material: [white_water]
+queue (pass1): [doped_water]
+[doped_water] found and removed from construction queue
+queue (pass1): [gd_scintillator]
+[gd_scintillator] found and removed from construction queue
+Loading optics: AR_coating
+Loading optics: MgF2
+Loading optics: TiO2
+Loading optics: ZnO2
+Loading optics: acrylic_SpartechSheet
+Loading optics: acrylic_black
+Loading optics: acrylic_polycast
+Loading optics: acrylic_rpt
+Loading optics: acrylic_suvt
+Loading optics: acrylic_uva_McMaster
+Loading optics: acrylic_uvt
+Loading optics: acrylic_uvt_RPT
+Loading optics: acrylic_uvt_good
+Loading optics: acrylic_white
+Loading optics: air
+Loading optics: aluminum
+Loading optics: black_water
+Loading optics: copper
+Loading optics: cryostat_vacuum
+Loading optics: doped_water
+Loading optics: gd_scintillator
+Loading optics: glass
+Loading optics: mineral_oil
+Loading optics: mirror
+Loading optics: nylon
+Loading optics: optical_grease
+Loading optics: photocathode
+Loading optics: photocathode_R11065
+Loading optics: photocathode_R11780
+Loading optics: photocathode_R1408
+Loading optics: photocathode_et9390b
+Loading optics: pmt_vacuum
+Loading optics: pseudocumene
+Loading optics: ptfe
+Loading optics: ptfe_fabric
+Loading optics: quartz
+Loading optics: salt_water
+Loading optics: sapphire
+Loading optics: scintillator
+Loading optics: stainless_steel
+Loading optics: stainless_steel_316L
+Loading optics: styrofoam
+Loading optics: tyvek
+Loading optics: water
+Loading optics: wbls_10pct
+Could not read property REEMISSION_PROB of wbls_10pct
+Loading optics: wbls_10pct_Gd
+Could not read property REEMISSION_PROB of wbls_10pct_Gd
+Loading optics: wbls_5pct
+Could not read property REEMISSION_PROB of wbls_5pct
+Loading optics: wbls_5pct_Gd
+Could not read property REEMISSION_PROB of wbls_5pct_Gd
+Loading optics: white_water
+Registering box
+Registering tube
+Registering torus
+Registering sphere
+Registering reflector
+Registering reflector_waveguide
+Registering pmtarray
+Registering pmtcoverage
+Registering waterboxarray
+Registering bubble
+Registering ptube
+Registering psphere
+Registering revarray
+Registering tubearray
+Registering revolve
+Registering revolveChimney
+Registering lens
+Registering polygon
+Registering border
+Registering convexlens
+Registering tubeinter
+Registering perfbox
+Registering cut_tube
+Registering watchmanshield
+GeoSolidFactory: Constructing volume world
+GeoSolidFactory: Constructing volume tank
+GeoSolidFactory: Constructing volume detector
+GeoSolidFactory: Constructing volume fiducial
+GeoPMTArrayFactory: Constructing volume inner_pmts
+Forcing B efficiency<= 1
+GeoPMTArrayFactory: Constructing volume veto_pmts
+Forcing B efficiency<= 1
+Warning: GLG4TorusStack making sizeable adjustment to rho_edge[5]: old 0, new 0.153649 (2)
+Warning: GLG4TorusStack making sizeable adjustment to rho_edge[2]: old 0, new 0.153646 (2)
+Warning: GLG4TorusStack making sizeable adjustment to rho_edge[5]: old 0, new 0.153649 (2)
+Warning: GLG4TorusStack making sizeable adjustment to rho_edge[2]: old 0, new 0.153646 (2)
+Note: +++ INCLUDING neutron_hp model. +++
+WARNING: G4AntiNeutronAnnihilationAtRest is deprecated and will be removed in GEANT4 version 10.0.
+WARNING: G4AntiProtonAnnihilationAtRest is deprecated and will be removed in GEANT4 version 10.0.
+WARNING: G4KaonMinusAbsorptionAtRest is deprecated and will be removed in GEANT4 version 10.0.
+NeutronHP: /Elastic file for Z = 6, A = 12 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 6, A = 13 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 10, A = 20 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Elastic/CrossSection/11_22_Sodium
+NeutronHP: /Elastic file for Z = 10, A = 21 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Elastic/CrossSection/11_22_Sodium
+NeutronHP: /Elastic file for Z = 10, A = 22 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Elastic/CrossSection/11_22_Sodium
+NeutronHP: /Elastic file for Z = 8, A = 18 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Elastic/CrossSection/8_17_Oxygen
+NeutronHP: /Elastic file for Z = 74, A = 180 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Elastic/CrossSection/74_182_Tungsten
+NeutronHP: /Capture file for Z = 6, A = 12 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 6, A = 12 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Inelastic file for Z = 6, A = 12 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Inelastic/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 6, A = 13 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 6, A = 13 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Inelastic file for Z = 6, A = 13 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Inelastic/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 10, A = 20 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Capture/CrossSection/11_22_Sodium
+NeutronHP: /Elastic file for Z = 10, A = 20 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Elastic/CrossSection/11_22_Sodium
+NeutronHP: /Inelastic file for Z = 10, A = 20 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Inelastic/CrossSection/11_22_Sodium
+NeutronHP: /Capture file for Z = 10, A = 21 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Capture/CrossSection/11_22_Sodium
+NeutronHP: /Elastic file for Z = 10, A = 21 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Elastic/CrossSection/11_22_Sodium
+NeutronHP: /Inelastic file for Z = 10, A = 21 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Inelastic/CrossSection/11_22_Sodium
+NeutronHP: /Capture file for Z = 10, A = 22 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Capture/CrossSection/11_22_Sodium
+NeutronHP: /Elastic file for Z = 10, A = 22 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Elastic/CrossSection/11_22_Sodium
+NeutronHP: /Inelastic file for Z = 10, A = 22 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Inelastic/CrossSection/11_22_Sodium
+NeutronHP: /Capture file for Z = 8, A = 18 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Capture/CrossSection/8_17_Oxygen
+NeutronHP: /Elastic file for Z = 8, A = 18 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Elastic/CrossSection/8_17_Oxygen
+NeutronHP: /Inelastic file for Z = 8, A = 18 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Inelastic/CrossSection/8_17_Oxygen
+NeutronHP: /Capture file for Z = 74, A = 180 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Capture/CrossSection/74_182_Tungsten
+NeutronHP: /Elastic file for Z = 74, A = 180 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Elastic/CrossSection/74_182_Tungsten
+NeutronHP: /Inelastic file for Z = 74, A = 180 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Inelastic/CrossSection/74_182_Tungsten
+WARNING: model G4LENeutronInelastic is being deprecated and will
+disappear in Geant4 version 10.0
+WARNING: model G4HENeutronInelastic is being deprecated and will
+disappear in Geant4 version 10.0
+NeutronHP: /Capture file for Z = 6, A = 12 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 6, A = 13 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 10, A = 20 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Capture/CrossSection/11_22_Sodium
+NeutronHP: /Capture file for Z = 10, A = 21 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Capture/CrossSection/11_22_Sodium
+NeutronHP: /Capture file for Z = 10, A = 22 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Capture/CrossSection/11_22_Sodium
+NeutronHP: /Capture file for Z = 8, A = 18 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Capture/CrossSection/8_17_Oxygen
+NeutronHP: /Capture file for Z = 74, A = 180 is not found and NeutronHP will use /Users/marcbergevin/geant4.9.6.p04/share/Geant4-9.6.4/data/G4NDL4.2/Capture/CrossSection/74_182_Tungsten
+WARNING: model G4LEPionPlusInelastic is being deprecated and will
+disappear in Geant4 version 10.0
+WARNING: model G4HEPionPlusInelastic is being deprecated and will
+disappear in Geant4 version 10.0
+WARNING: model G4LEPionMinusInelastic is being deprecated and will
+disappear in Geant4 version 10.0
+WARNING: model G4HEPionMinusInelastic is being deprecated and will
+disappear in Geant4 version 10.0
+WARNING: G4PiMinusAbsorptionAtRest is deprecated and will be removed in GEANT4 version 10.0.
+Cerenkov::Cerenkov constructor
+NOTE: this is now a G4VProcess!
+Required change in UserPhysicsList: 
+change: pmanager->AddContinuousProcess(theCerenkovProcess);
+to:     pmanager->AddProcess(theCerenkovProcess);
+        pmanager->SetProcessOrdering(theCerenkovProcess,idxPostStep);
+
+Warning! Found a scintillator without Re-emission spectrum (probably a scintillator without WLS)
+I will assume that for this material this spectrum is equal to the primary scintillation spectrum...
+
+Warning! Found a scintillator without LIGHT_YIELD parameter.
+I will assume that for this material this parameter is implicit in the scintillation integral...
+
+Warning! Found a scintillator without Re-emission spectrum (probably a scintillator without WLS)
+I will assume that for this material this spectrum is equal to the primary scintillation spectrum...
+
+Warning! Found a scintillator without LIGHT_YIELD parameter.
+I will assume that for this material this parameter is implicit in the scintillation integral...
+GLG4Scint[] {
+  myLowerMassLimit=0
+}
+GLG4Scint[heavy] {
+  myLowerMassLimit=844.445
+}
+Process Name Cerenkov : Type[Electromagnetic] : SubType[21]
+Process Name Attenuation : Type[Optical] : SubType[31]
+Process Name OpWLS : Type[Optical] : SubType[34]
+GLG4PhysicsList::SetCuts: done
+Warning : Region <inner_pmts_GLG4_PMTOpticalRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+Warning : Region <veto_pmts_GLG4_PMTOpticalRegion> does not have specific production cuts,
+even though it appears in the current tracking world.
+Default cuts are used for this region.
+OutROOTProc: Writing to ~/RAT_ROOT/neutron.root
+
+Rayl:   for  gamma    SubType= 11
+      Lambda table from 100 eV  to 100 keV in 55 bins, spline: 0
+      LambdaPrime table from 100 keV to 100 TeV in 165 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LivermoreRayleigh :  Emin=        0 eV    Emax=      100 TeV   CullenGenerator
+
+phot:   for  gamma    SubType= 12
+      LambdaPrime table from 200 keV to 100 TeV in 159 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       PhotoElectric :  Emin=        0 eV    Emax=      100 TeV   AngularGenSauterGavrila
+
+compt:   for  gamma    SubType= 13
+      Lambda table from 100 eV  to 1 MeV in 73 bins, spline: 1
+      LambdaPrime table from 1 MeV to 100 TeV in 147 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       Klein-Nishina :  Emin=        0 eV    Emax=      100 TeV
+
+conv:   for  gamma    SubType= 14
+      Lambda table from 1.022 MeV to 100 TeV in 146 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        BetheHeitler :  Emin=        0 eV    Emax=       80 GeV
+     BetheHeitlerLPM :  Emin=       80 GeV   Emax=      100 TeV
+
+msc:   for e-    SubType= 10
+      RangeFactor= 0.04, stepLimitType: 2, latDisplacement: 1, skin= 1, geomFactor= 2.5
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          UrbanMsc95 :  Emin=        0 eV    Emax=      100 TeV  Table with 216 bins Emin=    100 eV    Emax=    100 TeV
+
+eIoni:   for  e-    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      finalRange(mm)= 0.01, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha :  Emin=        0 eV    Emax=      100 TeV
+
+eBrem:   for  e-    SubType= 3
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      LPM flag: 1 for E > 1 GeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB :  Emin=        0 eV    Emax=        1 GeV   DipBustGen
+            eBremLPM :  Emin=        1 GeV   Emax=      100 TeV   DipBustGen
+
+msc:   for e+    SubType= 10
+      RangeFactor= 0.04, stepLimitType: 2, latDisplacement: 1, skin= 1, geomFactor= 2.5
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          UrbanMsc95 :  Emin=        0 eV    Emax=      100 TeV  Table with 216 bins Emin=    100 eV    Emax=    100 TeV
+
+eIoni:   for  e+    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      finalRange(mm)= 0.01, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha :  Emin=        0 eV    Emax=      100 TeV
+
+eBrem:   for  e+    SubType= 3
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      LPM flag: 1 for E > 1 GeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB :  Emin=        0 eV    Emax=        1 GeV   DipBustGen
+            eBremLPM :  Emin=        1 GeV   Emax=      100 TeV   DipBustGen
+
+annihil:   for  e+    SubType= 5
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg :  Emin=        0 eV    Emax=      100 TeV
+
+msc:   for proton    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          UrbanMsc95 :  Emin=        0 eV    Emax=      100 TeV  Table with 216 bins Emin=    100 eV    Emax=    100 TeV
+
+hIoni:   for  proton    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      finalRange(mm)= 0.005, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=        2 MeV
+          BetheBloch :  Emin=        2 MeV   Emax=      100 TeV
+
+hBrems:   for  proton    SubType= 3
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=      100 TeV
+
+hPairProd:   for  proton    SubType= 4
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=      100 TeV
+
+msc:   for GenericIon    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          UrbanMsc95 :  Emin=        0 eV    Emax=      100 TeV
+
+ionIoni:   for  GenericIon    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      finalRange(mm)= 0.002, dRoverRange= 0.1, integral: 1, fluct: 1, linLossLimit= 0.02
+      Stopping Power data for 17 ion/material pairs 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon :  Emin=        0 eV    Emax=        2 MeV
+          BetheBloch :  Emin=        2 MeV   Emax=      100 TeV
+
+msc:   for alpha    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          UrbanMsc95 :  Emin=        0 eV    Emax=      100 TeV  Table with 216 bins Emin=    100 eV    Emax=    100 TeV
+
+ionIoni:   for  alpha    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      finalRange(mm)= 0.002, dRoverRange= 0.1, integral: 1, fluct: 1, linLossLimit= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon :  Emin=        0 eV    Emax=   7.9452 MeV
+          BetheBloch :  Emin=   7.9452 MeV   Emax=      100 TeV
+
+msc:   for anti_proton    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          UrbanMsc95 :  Emin=        0 eV    Emax=      100 TeV  Table with 216 bins Emin=    100 eV    Emax=    100 TeV
+
+hIoni:   for  anti_proton    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=        2 MeV
+          BetheBloch :  Emin=        2 MeV   Emax=      100 TeV
+
+msc:   for kaon+    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          UrbanMsc95 :  Emin=        0 eV    Emax=      100 TeV  Table with 216 bins Emin=    100 eV    Emax=    100 TeV
+
+hIoni:   for  kaon+    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=  1.05231 MeV
+          BetheBloch :  Emin=  1.05231 MeV   Emax=      100 TeV
+
+msc:   for kaon-    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          UrbanMsc95 :  Emin=        0 eV    Emax=      100 TeV  Table with 216 bins Emin=    100 eV    Emax=    100 TeV
+
+hIoni:   for  kaon-    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=  1.05231 MeV
+          BetheBloch :  Emin=  1.05231 MeV   Emax=      100 TeV
+
+msc:   for mu+    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          UrbanMsc95 :  Emin=        0 eV    Emax=      100 TeV  Table with 216 bins Emin=    100 eV    Emax=    100 TeV
+
+muIoni:   for  mu+    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      finalRange(mm)= 0.05, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=      200 keV
+          BetheBloch :  Emin=      200 keV   Emax=        1 GeV
+        MuBetheBloch :  Emin=        1 GeV   Emax=      100 TeV
+
+muBrems:   for  mu+    SubType= 3
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem :  Emin=        0 eV    Emax=      100 TeV
+
+muPairProd:   for  mu+    SubType= 4
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin=        0 eV    Emax=      100 TeV
+
+msc:   for mu-    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          UrbanMsc95 :  Emin=        0 eV    Emax=      100 TeV  Table with 216 bins Emin=    100 eV    Emax=    100 TeV
+
+muIoni:   for  mu-    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      finalRange(mm)= 0.05, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=      200 keV
+          BetheBloch :  Emin=      200 keV   Emax=        1 GeV
+        MuBetheBloch :  Emin=        1 GeV   Emax=      100 TeV
+
+muBrems:   for  mu-    SubType= 3
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem :  Emin=        0 eV    Emax=      100 TeV
+
+muPairProd:   for  mu-    SubType= 4
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin=        0 eV    Emax=      100 TeV
+
+msc:   for pi+    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          UrbanMsc95 :  Emin=        0 eV    Emax=      100 TeV  Table with 216 bins Emin=    100 eV    Emax=    100 TeV
+
+hIoni:   for  pi+    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      finalRange(mm)= 0.005, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=  297.505 keV
+          BetheBloch :  Emin=  297.505 keV   Emax=      100 TeV
+
+hBrems:   for  pi+    SubType= 3
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=      100 TeV
+
+hPairProd:   for  pi+    SubType= 4
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=      100 TeV
+
+msc:   for pi-    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          UrbanMsc95 :  Emin=        0 eV    Emax=      100 TeV  Table with 216 bins Emin=    100 eV    Emax=    100 TeV
+
+hIoni:   for  pi-    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      finalRange(mm)= 0.005, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=  297.505 keV
+          BetheBloch :  Emin=  297.505 keV   Emax=      100 TeV
+
+hBrems:   for  pi-    SubType= 3
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=      100 TeV
+
+hPairProd:   for  pi-    SubType= 4
+      dE/dx and range tables from 100 eV  to 100 TeV in 220 bins
+      Lambda tables from threshold to 100 TeV in 220 bins, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=      100 TeV
+============================================================================================
+             HADRONIC PROCESSES SUMMARY (verbose level 1)
+
+                     Hadronic Processes for <anti_neutron>
+          AntiNeutronAnnihilationAtRest
+
+                     Hadronic Processes for <anti_proton>
+          AntiProtonAnnihilationAtRest
+
+                     Hadronic Processes for <kaon->
+          KaonMinusAbsorptionAtRest
+
+                                  Hadronic Processes for <mu+>
+                                  -----------------------------------
+         muonNuclear  Models: 
+         muonNuclear  Crs sctns:     KokoulinMuonNuclearXS: Emin(GeV)=    0  Emax(GeV)= 100000
+
+
+                                  Hadronic Processes for <mu->
+                                  -----------------------------------
+         muonNuclear  Models: 
+         muonNuclear  Crs sctns:     KokoulinMuonNuclearXS: Emin(GeV)=    0  Emax(GeV)= 100000
+
+          muMinusCaptureAtRest
+
+                                  Hadronic Processes for <neutron>
+                                  -----------------------------------
+          hadElastic  Models:             NeutronHPElastic: Emin(GeV)=    0  Emax(GeV)= 0.02
+                                                G4LElastic: Emin(GeV)= 0.02  Emax(GeV)= 1.79769e+305
+
+          hadElastic  Crs sctns:        NeutronHPElasticXS: Emin(GeV)=    0  Emax(GeV)= 0.02
+                                            GheishaElastic: Emin(GeV)=    0  Emax(GeV)= 100000
+
+    NeutronInelastic  Models:           NeutronHPInelastic: Emin(GeV)=    0  Emax(GeV)= 0.02
+                                      G4LENeutronInelastic: Emin(GeV)= 0.02  Emax(GeV)= 55
+                                      G4HENeutronInelastic: Emin(GeV)=   45  Emax(GeV)= 10000
+
+    NeutronInelastic  Crs sctns:      NeutronHPInelasticXS: Emin(GeV)=    0  Emax(GeV)= 0.02
+                                          GheishaInelastic: Emin(GeV)=    0  Emax(GeV)= 100000
+
+            nFission  Models:             NeutronHPFission: Emin(GeV)=    0  Emax(GeV)= 0.02
+                                                G4LFission: Emin(GeV)= 0.02  Emax(GeV)= 1.79769e+305
+
+            nFission  Crs sctns:        NeutronHPFissionXS: Emin(GeV)=    0  Emax(GeV)= 0.02
+                                          GheishaFissionXS: Emin(GeV)=    0  Emax(GeV)= 100000
+
+            nCapture  Models:             NeutronHPCapture: Emin(GeV)=    0  Emax(GeV)= 0.02
+                                                G4LCapture: Emin(GeV)= 0.02  Emax(GeV)= 1.79769e+305
+
+            nCapture  Crs sctns:        NeutronHPCaptureXS: Emin(GeV)=    0  Emax(GeV)= 0.02
+                                          GheishaCaptureXS: Emin(GeV)=    0  Emax(GeV)= 100000
+
+
+                                  Hadronic Processes for <pi+>
+                                  -----------------------------------
+          hadElastic  Models:                   G4LElastic: Emin(GeV)=    0  Emax(GeV)= 1.79769e+305
+
+          hadElastic  Crs sctns:            GheishaElastic: Emin(GeV)=    0  Emax(GeV)= 100000
+
+   PionPlusInelastic  Models:        G4LEPionPlusInelastic: Emin(GeV)=    0  Emax(GeV)= 55
+                                     G4HEPionPlusInelastic: Emin(GeV)=   45  Emax(GeV)= 10000
+
+   PionPlusInelastic  Crs sctns:          GheishaInelastic: Emin(GeV)=    0  Emax(GeV)= 100000
+
+
+                                  Hadronic Processes for <pi->
+                                  -----------------------------------
+          hadElastic  Models:                   G4LElastic: Emin(GeV)=    0  Emax(GeV)= 1.79769e+305
+
+          hadElastic  Crs sctns:            GheishaElastic: Emin(GeV)=    0  Emax(GeV)= 100000
+
+  PionMinusInelastic  Models:       G4LEPionMinusInelastic: Emin(GeV)=    0  Emax(GeV)= 55
+                                    G4HEPionMinusInelastic: Emin(GeV)=   45  Emax(GeV)= 10000
+
+  PionMinusInelastic  Crs sctns:          GheishaInelastic: Emin(GeV)=    0  Emax(GeV)= 100000
+
+          PiMinusAbsorptionAtRest
+============================================================================================
+
+========= Table of registered couples ==============================
+
+Index : 0     used in the geometry : Yes     recalculation needed : No 
+ Material : stainless_steel
+ Range cuts        :  gamma  10 um     e-  10 um     e+  10 um  proton 10 um 
+ Energy thresholds :  gamma  1.80045 keV    e-  59.6913 keV    e+  58.5 keV proton 1 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+    inner_pmts_GLG4_PMTOpticalRegion
+    veto_pmts_GLG4_PMTOpticalRegion
+
+Index : 1     used in the geometry : Yes     recalculation needed : No 
+ Material : doped_water
+ Range cuts        :  gamma  10 um     e-  10 um     e+  10 um  proton 10 um 
+ Energy thresholds :  gamma  990 eV     e-  14.0874 keV    e+  14.0874 keV proton 1 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 2     used in the geometry : Yes     recalculation needed : No 
+ Material : polypropylene
+ Range cuts        :  gamma  10 um     e-  10 um     e+  10 um  proton 10 um 
+ Energy thresholds :  gamma  990 eV     e-  12.097 keV    e+  11.7506 keV proton 1 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 3     used in the geometry : Yes     recalculation needed : No 
+ Material : glass
+ Range cuts        :  gamma  10 um     e-  10 um     e+  10 um  proton 10 um 
+ Energy thresholds :  gamma  990 eV     e-  31.7376 keV    e+  31.3139 keV proton 1 keV
+ Region(s) which use this couple : 
+    inner_pmts_GLG4_PMTOpticalRegion
+    veto_pmts_GLG4_PMTOpticalRegion
+
+Index : 4     used in the geometry : Yes     recalculation needed : No 
+ Material : pmt_vacuum
+ Range cuts        :  gamma  10 um     e-  10 um     e+  10 um  proton 10 um 
+ Energy thresholds :  gamma  990 eV     e-  990 eV     e+  990 eV  proton 1 keV
+ Region(s) which use this couple : 
+    inner_pmts_GLG4_PMTOpticalRegion
+    veto_pmts_GLG4_PMTOpticalRegion
+
+====================================================================
+
+Gsim: Simulating run 1
+Gsim: Run start at Mon, 18 May 2015 15:57:37 UTC +475429000 nsec
+Setting up PDF PMTTime model for r7081
+Setting up PDF PMTCharge model for r7081
+CountProc: Event 1 (1 triggered events)
+CountProc: Event 2 (2 triggered events)
+CountProc: Event 3 (3 triggered events)
+CountProc: Event 4 (4 triggered events)
+CountProc: Event 5 (5 triggered events)
+CountProc: Event 6 (6 triggered events)
+CountProc: Event 7 (7 triggered events)
+CountProc: Event 8 (8 triggered events)
+CountProc: Event 9 (9 triggered events)
+CountProc: Event 10 (10 triggered events)
+CountProc: Event 11 (11 triggered events)
+CountProc: Event 12 (12 triggered events)
+CountProc: Event 13 (13 triggered events)
+CountProc: Event 14 (14 triggered events)
+CountProc: Event 15 (15 triggered events)
+CountProc: Event 16 (16 triggered events)
+CountProc: Event 17 (17 triggered events)
+CountProc: Event 18 (18 triggered events)
+CountProc: Event 19 (19 triggered events)
+CountProc: Event 20 (20 triggered events)
+CountProc: Event 21 (21 triggered events)
+CountProc: Event 22 (22 triggered events)
+CountProc: Event 23 (23 triggered events)
+CountProc: Event 24 (24 triggered events)
+CountProc: Event 25 (25 triggered events)
+CountProc: Event 26 (26 triggered events)
+CountProc: Event 27 (27 triggered events)
+CountProc: Event 28 (28 triggered events)
+CountProc: Event 29 (29 triggered events)
+CountProc: Event 30 (30 triggered events)
+CountProc: Event 31 (31 triggered events)
+CountProc: Event 32 (32 triggered events)
+CountProc: Event 33 (33 triggered events)
+CountProc: Event 34 (34 triggered events)
+CountProc: Event 35 (35 triggered events)
+CountProc: Event 36 (36 triggered events)
+CountProc: Event 37 (37 triggered events)
+CountProc: Event 38 (38 triggered events)
+CountProc: Event 39 (39 triggered events)
+CountProc: Event 40 (40 triggered events)
+CountProc: Event 41 (41 triggered events)
+CountProc: Event 42 (42 triggered events)
+CountProc: Event 43 (43 triggered events)
+CountProc: Event 44 (44 triggered events)
+CountProc: Event 45 (45 triggered events)
+CountProc: Event 46 (46 triggered events)
+CountProc: Event 47 (47 triggered events)
+CountProc: Event 48 (48 triggered events)
+CountProc: Event 49 (49 triggered events)
+CountProc: Event 50 (50 triggered events)
+CountProc: Event 51 (51 triggered events)
+CountProc: Event 52 (52 triggered events)
+CountProc: Event 53 (53 triggered events)
+CountProc: Event 54 (54 triggered events)
+CountProc: Event 55 (55 triggered events)
+CountProc: Event 56 (56 triggered events)
+CountProc: Event 57 (57 triggered events)
+CountProc: Event 58 (58 triggered events)
+CountProc: Event 59 (59 triggered events)
+CountProc: Event 60 (60 triggered events)
+CountProc: Event 61 (61 triggered events)
+CountProc: Event 62 (62 triggered events)
+CountProc: Event 63 (63 triggered events)
+CountProc: Event 64 (64 triggered events)
+CountProc: Event 65 (65 triggered events)
+CountProc: Event 66 (66 triggered events)
+CountProc: Event 67 (67 triggered events)
+CountProc: Event 68 (68 triggered events)
+CountProc: Event 69 (69 triggered events)
+CountProc: Event 70 (70 triggered events)
+CountProc: Event 71 (71 triggered events)
+CountProc: Event 72 (72 triggered events)
+CountProc: Event 73 (73 triggered events)
+CountProc: Event 74 (74 triggered events)
+CountProc: Event 75 (75 triggered events)
+CountProc: Event 76 (76 triggered events)
+CountProc: Event 77 (77 triggered events)
+CountProc: Event 78 (78 triggered events)
+CountProc: Event 79 (79 triggered events)
+CountProc: Event 80 (80 triggered events)
+CountProc: Event 81 (81 triggered events)
+CountProc: Event 82 (82 triggered events)
+CountProc: Event 83 (83 triggered events)
+CountProc: Event 84 (84 triggered events)
+CountProc: Event 85 (85 triggered events)
+CountProc: Event 86 (86 triggered events)
+CountProc: Event 87 (87 triggered events)
+CountProc: Event 88 (88 triggered events)
+CountProc: Event 89 (89 triggered events)
+CountProc: Event 90 (90 triggered events)
+CountProc: Event 91 (91 triggered events)
+CountProc: Event 92 (92 triggered events)
+CountProc: Event 93 (93 triggered events)
+CountProc: Event 94 (94 triggered events)
+CountProc: Event 95 (95 triggered events)
+CountProc: Event 96 (96 triggered events)
+CountProc: Event 97 (97 triggered events)
+CountProc: Event 98 (98 triggered events)
+CountProc: Event 99 (99 triggered events)
+CountProc: Event 100 (100 triggered events)
+CountProc: Event 101 (101 triggered events)
+CountProc: Event 102 (102 triggered events)
+CountProc: Event 103 (103 triggered events)
+CountProc: Event 104 (104 triggered events)
+CountProc: Event 105 (105 triggered events)
+CountProc: Event 106 (106 triggered events)
+CountProc: Event 107 (107 triggered events)
+CountProc: Event 108 (108 triggered events)
+CountProc: Event 109 (109 triggered events)
+CountProc: Event 110 (110 triggered events)
+CountProc: Event 111 (111 triggered events)
+CountProc: Event 112 (112 triggered events)
+CountProc: Event 113 (113 triggered events)
+CountProc: Event 114 (114 triggered events)
+CountProc: Event 115 (115 triggered events)
+CountProc: Event 116 (116 triggered events)
+CountProc: Event 117 (117 triggered events)
+CountProc: Event 118 (118 triggered events)
+CountProc: Event 119 (119 triggered events)
+CountProc: Event 120 (120 triggered events)
+CountProc: Event 121 (121 triggered events)
+CountProc: Event 122 (122 triggered events)
+CountProc: Event 123 (123 triggered events)
+CountProc: Event 124 (124 triggered events)
+CountProc: Event 125 (125 triggered events)
+CountProc: Event 126 (126 triggered events)
+CountProc: Event 127 (127 triggered events)
+CountProc: Event 128 (128 triggered events)
+CountProc: Event 129 (129 triggered events)
+CountProc: Event 130 (130 triggered events)
+CountProc: Event 131 (131 triggered events)
+CountProc: Event 132 (132 triggered events)
+CountProc: Event 133 (133 triggered events)
+CountProc: Event 134 (134 triggered events)
+CountProc: Event 135 (135 triggered events)
+CountProc: Event 136 (136 triggered events)
+CountProc: Event 137 (137 triggered events)
+CountProc: Event 138 (138 triggered events)
+CountProc: Event 139 (139 triggered events)
+CountProc: Event 140 (140 triggered events)
+CountProc: Event 141 (141 triggered events)
+CountProc: Event 142 (142 triggered events)
+CountProc: Event 143 (143 triggered events)
+CountProc: Event 144 (144 triggered events)
+CountProc: Event 145 (145 triggered events)
+CountProc: Event 146 (146 triggered events)
+CountProc: Event 147 (147 triggered events)
+CountProc: Event 148 (148 triggered events)
+CountProc: Event 149 (149 triggered events)
+CountProc: Event 150 (150 triggered events)
+CountProc: Event 151 (151 triggered events)
+CountProc: Event 152 (152 triggered events)
+CountProc: Event 153 (153 triggered events)
+CountProc: Event 154 (154 triggered events)
+CountProc: Event 155 (155 triggered events)
+CountProc: Event 156 (156 triggered events)
+CountProc: Event 157 (157 triggered events)
+CountProc: Event 158 (158 triggered events)
+CountProc: Event 159 (159 triggered events)
+CountProc: Event 160 (160 triggered events)
+CountProc: Event 161 (161 triggered events)
+CountProc: Event 162 (162 triggered events)
+CountProc: Event 163 (163 triggered events)
+CountProc: Event 164 (164 triggered events)
+CountProc: Event 165 (165 triggered events)
+CountProc: Event 166 (166 triggered events)
+CountProc: Event 167 (167 triggered events)
+CountProc: Event 168 (168 triggered events)
+CountProc: Event 169 (169 triggered events)
+CountProc: Event 170 (170 triggered events)
+CountProc: Event 171 (171 triggered events)
+CountProc: Event 172 (172 triggered events)
+CountProc: Event 173 (173 triggered events)
+CountProc: Event 174 (174 triggered events)
+CountProc: Event 175 (175 triggered events)
+CountProc: Event 176 (176 triggered events)
+CountProc: Event 177 (177 triggered events)
+CountProc: Event 178 (178 triggered events)
+CountProc: Event 179 (179 triggered events)
+CountProc: Event 180 (180 triggered events)
+CountProc: Event 181 (181 triggered events)
+CountProc: Event 182 (182 triggered events)
+CountProc: Event 183 (183 triggered events)
+CountProc: Event 184 (184 triggered events)
+CountProc: Event 185 (185 triggered events)
+CountProc: Event 186 (186 triggered events)
+CountProc: Event 187 (187 triggered events)
+CountProc: Event 188 (188 triggered events)
+CountProc: Event 189 (189 triggered events)
+CountProc: Event 190 (190 triggered events)
+CountProc: Event 191 (191 triggered events)
+CountProc: Event 192 (192 triggered events)
+CountProc: Event 193 (193 triggered events)
+CountProc: Event 194 (194 triggered events)
+CountProc: Event 195 (195 triggered events)
+CountProc: Event 196 (196 triggered events)
+CountProc: Event 197 (197 triggered events)
+CountProc: Event 198 (198 triggered events)
+CountProc: Event 199 (199 triggered events)
+CountProc: Event 200 (200 triggered events)
+CountProc: Event 201 (201 triggered events)
+CountProc: Event 202 (202 triggered events)
+CountProc: Event 203 (203 triggered events)
+CountProc: Event 204 (204 triggered events)
+CountProc: Event 205 (205 triggered events)
+CountProc: Event 206 (206 triggered events)
+CountProc: Event 207 (207 triggered events)
+CountProc: Event 208 (208 triggered events)
+CountProc: Event 209 (209 triggered events)
+CountProc: Event 210 (210 triggered events)
+CountProc: Event 211 (211 triggered events)
+CountProc: Event 212 (212 triggered events)
+CountProc: Event 213 (213 triggered events)
+CountProc: Event 214 (214 triggered events)
+CountProc: Event 215 (215 triggered events)
+CountProc: Event 216 (216 triggered events)
+CountProc: Event 217 (217 triggered events)
+CountProc: Event 218 (218 triggered events)
+CountProc: Event 219 (219 triggered events)
+CountProc: Event 220 (220 triggered events)
+CountProc: Event 221 (221 triggered events)
+CountProc: Event 222 (222 triggered events)
+CountProc: Event 223 (223 triggered events)
+CountProc: Event 224 (224 triggered events)
+CountProc: Event 225 (225 triggered events)
+CountProc: Event 226 (226 triggered events)
+CountProc: Event 227 (227 triggered events)
+CountProc: Event 228 (228 triggered events)
+CountProc: Event 229 (229 triggered events)
+CountProc: Event 230 (230 triggered events)
+CountProc: Event 231 (231 triggered events)
+CountProc: Event 232 (232 triggered events)
+CountProc: Event 233 (233 triggered events)
+CountProc: Event 234 (234 triggered events)
+CountProc: Event 235 (235 triggered events)
+CountProc: Event 236 (236 triggered events)
+CountProc: Event 237 (237 triggered events)
+CountProc: Event 238 (238 triggered events)
+CountProc: Event 239 (239 triggered events)
+CountProc: Event 240 (240 triggered events)
+CountProc: Event 241 (241 triggered events)
+CountProc: Event 242 (242 triggered events)
+CountProc: Event 243 (243 triggered events)
+CountProc: Event 244 (244 triggered events)
+CountProc: Event 245 (245 triggered events)
+CountProc: Event 246 (246 triggered events)
+CountProc: Event 247 (247 triggered events)
+CountProc: Event 248 (248 triggered events)
+CountProc: Event 249 (249 triggered events)
+CountProc: Event 250 (250 triggered events)
+CountProc: Event 251 (251 triggered events)
+CountProc: Event 252 (252 triggered events)
+CountProc: Event 253 (253 triggered events)
+CountProc: Event 254 (254 triggered events)
+CountProc: Event 255 (255 triggered events)
+CountProc: Event 256 (256 triggered events)
+CountProc: Event 257 (257 triggered events)
+CountProc: Event 258 (258 triggered events)
+CountProc: Event 259 (259 triggered events)
+CountProc: Event 260 (260 triggered events)
+CountProc: Event 261 (261 triggered events)
+CountProc: Event 262 (262 triggered events)
+CountProc: Event 263 (263 triggered events)
+CountProc: Event 264 (264 triggered events)
+CountProc: Event 265 (265 triggered events)
+CountProc: Event 266 (266 triggered events)
+CountProc: Event 267 (267 triggered events)
+CountProc: Event 268 (268 triggered events)
+CountProc: Event 269 (269 triggered events)
+CountProc: Event 270 (270 triggered events)
+CountProc: Event 271 (271 triggered events)
+CountProc: Event 272 (272 triggered events)
+CountProc: Event 273 (273 triggered events)
+CountProc: Event 274 (274 triggered events)
+CountProc: Event 275 (275 triggered events)
+CountProc: Event 276 (276 triggered events)
+CountProc: Event 277 (277 triggered events)
+CountProc: Event 278 (278 triggered events)
+CountProc: Event 279 (279 triggered events)
+CountProc: Event 280 (280 triggered events)
+CountProc: Event 281 (281 triggered events)
+CountProc: Event 282 (282 triggered events)
+CountProc: Event 283 (283 triggered events)
+CountProc: Event 284 (284 triggered events)
+CountProc: Event 285 (285 triggered events)
+CountProc: Event 286 (286 triggered events)
+CountProc: Event 287 (287 triggered events)
+CountProc: Event 288 (288 triggered events)
+CountProc: Event 289 (289 triggered events)
+CountProc: Event 290 (290 triggered events)
+CountProc: Event 291 (291 triggered events)
+CountProc: Event 292 (292 triggered events)
+CountProc: Event 293 (293 triggered events)
+CountProc: Event 294 (294 triggered events)
+CountProc: Event 295 (295 triggered events)
+CountProc: Event 296 (296 triggered events)
+CountProc: Event 297 (297 triggered events)
+CountProc: Event 298 (298 triggered events)
+CountProc: Event 299 (299 triggered events)
+CountProc: Event 300 (300 triggered events)
+CountProc: Event 301 (301 triggered events)
+CountProc: Event 302 (302 triggered events)
+CountProc: Event 303 (303 triggered events)
+CountProc: Event 304 (304 triggered events)
+CountProc: Event 305 (305 triggered events)
+CountProc: Event 306 (306 triggered events)
+CountProc: Event 307 (307 triggered events)
+CountProc: Event 308 (308 triggered events)
+CountProc: Event 309 (309 triggered events)
+CountProc: Event 310 (310 triggered events)
+CountProc: Event 311 (311 triggered events)
+CountProc: Event 312 (312 triggered events)
+CountProc: Event 313 (313 triggered events)
+CountProc: Event 314 (314 triggered events)
+CountProc: Event 315 (315 triggered events)
+CountProc: Event 316 (316 triggered events)
+CountProc: Event 317 (317 triggered events)
+CountProc: Event 318 (318 triggered events)
+CountProc: Event 319 (319 triggered events)
+CountProc: Event 320 (320 triggered events)
+CountProc: Event 321 (321 triggered events)
+CountProc: Event 322 (322 triggered events)
+CountProc: Event 323 (323 triggered events)
+CountProc: Event 324 (324 triggered events)
+CountProc: Event 325 (325 triggered events)
+CountProc: Event 326 (326 triggered events)
+CountProc: Event 327 (327 triggered events)
+CountProc: Event 328 (328 triggered events)
+CountProc: Event 329 (329 triggered events)
+CountProc: Event 330 (330 triggered events)
+CountProc: Event 331 (331 triggered events)
+CountProc: Event 332 (332 triggered events)
+CountProc: Event 333 (333 triggered events)
+CountProc: Event 334 (334 triggered events)
+CountProc: Event 335 (335 triggered events)
+CountProc: Event 336 (336 triggered events)
+CountProc: Event 337 (337 triggered events)
+CountProc: Event 338 (338 triggered events)
+CountProc: Event 339 (339 triggered events)
+CountProc: Event 340 (340 triggered events)
+CountProc: Event 341 (341 triggered events)
+CountProc: Event 342 (342 triggered events)
+CountProc: Event 343 (343 triggered events)
+CountProc: Event 344 (344 triggered events)
+CountProc: Event 345 (345 triggered events)
+CountProc: Event 346 (346 triggered events)
+CountProc: Event 347 (347 triggered events)
+CountProc: Event 348 (348 triggered events)
+CountProc: Event 349 (349 triggered events)
+CountProc: Event 350 (350 triggered events)
+CountProc: Event 351 (351 triggered events)
+CountProc: Event 352 (352 triggered events)
+CountProc: Event 353 (353 triggered events)
+CountProc: Event 354 (354 triggered events)
+CountProc: Event 355 (355 triggered events)
+CountProc: Event 356 (356 triggered events)
+CountProc: Event 357 (357 triggered events)
+CountProc: Event 358 (358 triggered events)
+CountProc: Event 359 (359 triggered events)
+CountProc: Event 360 (360 triggered events)
+CountProc: Event 361 (361 triggered events)
+CountProc: Event 362 (362 triggered events)
+CountProc: Event 363 (363 triggered events)
+CountProc: Event 364 (364 triggered events)
+CountProc: Event 365 (365 triggered events)
+CountProc: Event 366 (366 triggered events)
+CountProc: Event 367 (367 triggered events)
+CountProc: Event 368 (368 triggered events)
+CountProc: Event 369 (369 triggered events)
+CountProc: Event 370 (370 triggered events)
+CountProc: Event 371 (371 triggered events)
+CountProc: Event 372 (372 triggered events)
+CountProc: Event 373 (373 triggered events)
+CountProc: Event 374 (374 triggered events)
+CountProc: Event 375 (375 triggered events)
+CountProc: Event 376 (376 triggered events)
+CountProc: Event 377 (377 triggered events)
+CountProc: Event 378 (378 triggered events)
+CountProc: Event 379 (379 triggered events)
+CountProc: Event 380 (380 triggered events)
+CountProc: Event 381 (381 triggered events)
+CountProc: Event 382 (382 triggered events)
+CountProc: Event 383 (383 triggered events)
+CountProc: Event 384 (384 triggered events)
+CountProc: Event 385 (385 triggered events)
+CountProc: Event 386 (386 triggered events)
+CountProc: Event 387 (387 triggered events)
+CountProc: Event 388 (388 triggered events)
+CountProc: Event 389 (389 triggered events)
+CountProc: Event 390 (390 triggered events)
+CountProc: Event 391 (391 triggered events)
+CountProc: Event 392 (392 triggered events)
+CountProc: Event 393 (393 triggered events)
+CountProc: Event 394 (394 triggered events)
+CountProc: Event 395 (395 triggered events)
+CountProc: Event 396 (396 triggered events)
+CountProc: Event 397 (397 triggered events)
+CountProc: Event 398 (398 triggered events)
+CountProc: Event 399 (399 triggered events)
+CountProc: Event 400 (400 triggered events)
+CountProc: Event 401 (401 triggered events)
+CountProc: Event 402 (402 triggered events)
+CountProc: Event 403 (403 triggered events)
+CountProc: Event 404 (404 triggered events)
+CountProc: Event 405 (405 triggered events)
+CountProc: Event 406 (406 triggered events)
+CountProc: Event 407 (407 triggered events)
+CountProc: Event 408 (408 triggered events)
+CountProc: Event 409 (409 triggered events)
+CountProc: Event 410 (410 triggered events)
+CountProc: Event 411 (411 triggered events)
+CountProc: Event 412 (412 triggered events)
+CountProc: Event 413 (413 triggered events)
+CountProc: Event 414 (414 triggered events)
+CountProc: Event 415 (415 triggered events)
+CountProc: Event 416 (416 triggered events)
+CountProc: Event 417 (417 triggered events)
+CountProc: Event 418 (418 triggered events)
+CountProc: Event 419 (419 triggered events)
+CountProc: Event 420 (420 triggered events)
+CountProc: Event 421 (421 triggered events)
+CountProc: Event 422 (422 triggered events)
+CountProc: Event 423 (423 triggered events)
+CountProc: Event 424 (424 triggered events)
+CountProc: Event 425 (425 triggered events)
+CountProc: Event 426 (426 triggered events)
+CountProc: Event 427 (427 triggered events)
+CountProc: Event 428 (428 triggered events)
+CountProc: Event 429 (429 triggered events)
+CountProc: Event 430 (430 triggered events)
+CountProc: Event 431 (431 triggered events)
+CountProc: Event 432 (432 triggered events)
+CountProc: Event 433 (433 triggered events)
+CountProc: Event 434 (434 triggered events)
+CountProc: Event 435 (435 triggered events)
+CountProc: Event 436 (436 triggered events)
+CountProc: Event 437 (437 triggered events)
+CountProc: Event 438 (438 triggered events)
+CountProc: Event 439 (439 triggered events)
+CountProc: Event 440 (440 triggered events)
+CountProc: Event 441 (441 triggered events)
+CountProc: Event 442 (442 triggered events)
+CountProc: Event 443 (443 triggered events)
+CountProc: Event 444 (444 triggered events)
+CountProc: Event 445 (445 triggered events)
+CountProc: Event 446 (446 triggered events)
+CountProc: Event 447 (447 triggered events)
+CountProc: Event 448 (448 triggered events)
+CountProc: Event 449 (449 triggered events)
+CountProc: Event 450 (450 triggered events)
+CountProc: Event 451 (451 triggered events)
+CountProc: Event 452 (452 triggered events)
+CountProc: Event 453 (453 triggered events)
+CountProc: Event 454 (454 triggered events)
+CountProc: Event 455 (455 triggered events)
+CountProc: Event 456 (456 triggered events)
+CountProc: Event 457 (457 triggered events)
+CountProc: Event 458 (458 triggered events)
+CountProc: Event 459 (459 triggered events)
+CountProc: Event 460 (460 triggered events)
+CountProc: Event 461 (461 triggered events)
+CountProc: Event 462 (462 triggered events)
+CountProc: Event 463 (463 triggered events)
+CountProc: Event 464 (464 triggered events)
+CountProc: Event 465 (465 triggered events)
+CountProc: Event 466 (466 triggered events)
+CountProc: Event 467 (467 triggered events)
+CountProc: Event 468 (468 triggered events)
+CountProc: Event 469 (469 triggered events)
+CountProc: Event 470 (470 triggered events)
+CountProc: Event 471 (471 triggered events)
+CountProc: Event 472 (472 triggered events)
+CountProc: Event 473 (473 triggered events)
+CountProc: Event 474 (474 triggered events)
+CountProc: Event 475 (475 triggered events)
+CountProc: Event 476 (476 triggered events)
+CountProc: Event 477 (477 triggered events)
+CountProc: Event 478 (478 triggered events)
+CountProc: Event 479 (479 triggered events)
+CountProc: Event 480 (480 triggered events)
+CountProc: Event 481 (481 triggered events)
+CountProc: Event 482 (482 triggered events)
+CountProc: Event 483 (483 triggered events)
+CountProc: Event 484 (484 triggered events)
+CountProc: Event 485 (485 triggered events)
+CountProc: Event 486 (486 triggered events)
+CountProc: Event 487 (487 triggered events)
+CountProc: Event 488 (488 triggered events)
+CountProc: Event 489 (489 triggered events)
+CountProc: Event 490 (490 triggered events)
+CountProc: Event 491 (491 triggered events)
+CountProc: Event 492 (492 triggered events)
+CountProc: Event 493 (493 triggered events)
+CountProc: Event 494 (494 triggered events)
+CountProc: Event 495 (495 triggered events)
+CountProc: Event 496 (496 triggered events)
+CountProc: Event 497 (497 triggered events)
+CountProc: Event 498 (498 triggered events)
+CountProc: Event 499 (499 triggered events)
+CountProc: Event 500 (500 triggered events)
+Run time:    323.33 sec
+CPU usage: user   316.91 sec	sys   1.93 sec
+Processor usage statistics
+--------------------------
+             Event source: 0.238 sec/event
+                simpledaq: 0.000 sec/event
+                    count: 0.000 sec/event
+                  outroot: 0.015 sec/event
+--------------------------
+Total: 0.253 sec/event
+
+CountProc: Total # of events 500 (500 triggered events)
+Graphics systems deleted.
+Visualization Manager deleting...
+WARNING - Attempt to delete the solid store while geometry closed !
+WARNING - Attempt to delete the logical volume store while geometry closed !
+WARNING - Attempt to delete the physical volume store while geometry closed !
+WARNING - Attempt to delete the region store while geometry closed !
