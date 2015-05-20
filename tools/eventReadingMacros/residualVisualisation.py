@@ -23,7 +23,7 @@ def drange(start, stop, step):
 
 if __name__ == "__main__":
  
-    nageom  = ROOT.TFile( 'piPlus_wbls10.root' )
+    nageom  = ROOT.TFile( '../../watchboy.root' )
     runT    = ROOT.gROOT.FindObject('runT')
     T       = ROOT.gROOT.FindObject( 'T' )
     #    T.Show(0)
