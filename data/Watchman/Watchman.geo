@@ -35,7 +35,7 @@ type: "tube",
 r_max: 7984.125,
 size_z: 7984.125, //half height, mm
 position: [0.0, 0.0, 0.0],
-material: "doped_water",
+material: "water",//
 color: [0.2,0.2,0.2,0.1],
 drawstyle: "solid"
 }
@@ -123,7 +123,7 @@ position: [0.0, 0.0, 0.0],
 color: [0.1, 0.8, 0.1, 0.01],
 }
 
-// Fiducial defined as separate geometry component a la baccarat
+// Fiducial defined as separate geometry component a la baccarat //wbls_10pct_Gd//doped_water//
 {
 name: "GEO",
 index: "fiducial",

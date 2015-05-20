@@ -16,6 +16,8 @@
 #include <G4VisExecutive.hh>
 #include <G4UIExecutive.hh>
 
+#include <G4PhysListFactory.hh>
+
 // time.h must come after Randomize.hh on RedHat 7.3 
 #include <time.h>
 
@@ -86,8 +88,8 @@ int main(int argc, char** argv) {
     detail << "Seeding random number generator: " << options.seed << newline;
     CLHEP::HepRandom::setTheSeed(options.seed);
     gRandom->SetSeed(options.seed);
-
-    // initialize RATDB and load all .ratdb files in $GLG4DATA,
+    
+      // initialize RATDB and load all .ratdb files in $GLG4DATA,
     // usually set to $RATROOT/data
     DB *rdb = DB::Get();
     if ( getenv("GLG4DATA") != NULL )
@@ -124,6 +126,10 @@ int main(int argc, char** argv) {
     InROOTProducer *inroot = new InROOTProducer(mainBlock);
     InNetProducer *innet = new InNetProducer(mainBlock);
     // RATFsim *fsim = new RATFsim(analysisStack); // SOMEDAY!
+    
+
+    
+
 
     // Setup signal handler to intercept Ctrl-C and quit event loop
     // nicely (closing files and all that).
