@@ -37,8 +37,9 @@ Modify data/OPTICS.ratdb
 #To add geometry 
 Modify data/Watchman/Watchman.geo
 
+git add data/Watchman/Watchman.geo
 
-git add 
+#Documentation 
 
 http://rat.readthedocs.org/en/latest/
 
