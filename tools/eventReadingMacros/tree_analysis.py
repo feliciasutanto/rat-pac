@@ -32,7 +32,7 @@ if __name__ == "__main__":
     #
     ##    for event in T_10_10:
     ##        print "%s \n" %(event.ds.ev.qTotal)
-    nageom  = ROOT.TFile( '../../watchboy.root' )
+    nageom  = ROOT.TFile( 'watchboy.root' )
     runT    = ROOT.gROOT.FindObject('runT')
     T       = ROOT.gROOT.FindObject( 'T' )
     #    T.Show(0)

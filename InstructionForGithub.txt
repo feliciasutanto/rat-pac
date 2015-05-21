@@ -1,0 +1,108 @@
+#Add the fork to my local rat-pac depository (once)
+git remote add fork https://github.com/MarcFBergevin/rat-pac.git
+
+#First step in developing new code (always):
+git checkout master
+
+#Do once step, remote add from main repository (only once, to set up main):
+git remote add main https://github.com/rat-pac/rat-pac.git
+
+#Second step (get latest and greatest and dump in main):
+git pull main master
+
+#Create an environment to develop code
+git branch MarcDev
+git checkout MarcDev
+
+#While developing:
+git add data/Watchman/Watchman.geo (or file that is to be committed)
+
+#Commit often, commit, seriously.
+git commit
+
+#It’s showtime, push to my fork (Ben and Andy)
+git push fork MarcDev
+
+#After this is done, open pull request on github.
+
+####### Things to remember
+
+#If you mess up with the commit. Make changes. Unstage file
+git commit —amend (overwrite last commit, in case of goof)
+
+# To add new material:
+Modify data/MATERIAL.ratdb
+Modify data/OPTICS.ratdb
+
+#To add geometry 
+Modify data/Watchman/Watchman.geo
+
+# Type refers to a geobuilder factory that create the G4Objects
+
+
+http://rat.readthedocs.org/en/latest/
+
+
+## If you want to check what you are connected to
+git remote -v
+
+e.g.: 
+>git remote -v
+andy	https://github.com/mastbaum/rat-pac.git (push)
+andy	https://github.com/mastbaum/rat-pac.git (fetch)
+fork	git@github.com:MarcFBergevin/rat-pac.git (fetch)
+fork	git@github.com:MarcFBergevin/rat-pac.git (push)
+fork_teal	https://github.com/pershint/rat-pac.git (fetch)
+fork_teal	https://github.com/pershint/rat-pac.git (push)
+main	https://github.com/rat-pac/rat-pac.git (push)
+main	https://github.com/rat-pac/rat-pac.git (fetch)
+origin	https://github.com/BenLand100/rat-pac (fetch)
+origin	https://github.com/BenLand100/rat-pac (push)
+
+## If you have deleted a file by mistake:
+
+git checkout -- /path/to/file
+
+## git branch -r
+  andy/annie
+  andy/baccy-geo
+  andy/braidwood-daq
+  andy/component-optics-dev
+  andy/egads-optics
+  andy/geant4-v10-compat
+  andy/github-guide
+  andy/master
+  andy/opsurface-fix
+  andy/pmtinfo-bugfix
+  andy/programmer-guide
+  andy/r11780
+  andy/scint-ly-fix
+  fork/GV10
+  fork/MarcDev
+  fork/bonsai
+  fork/geant410Dev
+  fork/marc_RAndD_bonsai
+  fork/master
+  fork/watchboy
+  fork/wbls10pct_Gd
+  fork_teal/BismuthDecays
+  fork_teal/ReacIBD
+  main/master
+  main/rountreeDev
+  origin/HEAD -> origin/master
+  origin/asdc
+  origin/betterpmts
+  origin/bonsai
+  origin/bonsai_and_watchman
+  origin/detectorfactory
+  origin/eventmanip
+  origin/fastjson
+  origin/fill
+  origin/fixqt
+  origin/ftp
+  origin/master
+  origin/pmtcharge
+  origin/suffixless
+  origin/testing
+  origin/watchman
+  origin/watchmanupdates
