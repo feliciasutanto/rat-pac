@@ -33,7 +33,7 @@ name: "GEO",
 index: "detector", 
 valid_begin: [0, 0],
 valid_end: [0, 0],
-mother: "world",
+mother: "liner",
 type: "tube",
 r_max: 1980.0,
 size_z: 1651.0,
@@ -68,7 +68,7 @@ type: "tube",
 r_max: 748.3,
 size_z: 507.0,
 position: [0.0, 0.0, 0.0],
-material: "water",
+material: "doped_water",
 color: [0.0, 1.0, 0.0, 0.1],
 drawstyle: "solid"
 }
@@ -103,6 +103,7 @@ color: [0.0, 0.0, 1.0, 0.1],
 drawstyle: "solid"
 }
 
+<<<<<<< HEAD
 {
 name: "GEO",
 index: "calibTube",
@@ -136,13 +137,15 @@ drawstyle: "solid"
 }
 
 
+=======
+>>>>>>> a481e2bff9467ccb89dbe3226239c74ec0ef8df1
 { 
 name: "GEO", 
 index: "inner_pmts", 
 enable: 1,
 valid_begin: [0, 0], 
 valid_end: [0, 0], 
-mother: "detector", 
+mother: "mid_water", 
 type: "pmtarray",
 pmt_model: "r7081",
 pmt_detector_type: "idpmt",
