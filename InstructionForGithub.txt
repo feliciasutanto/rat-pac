@@ -11,17 +11,17 @@ git remote add main https://github.com/rat-pac/rat-pac.git
 git pull main master
 
 #Create an environment to develop code
-git branch MarcDev
-git checkout MarcDev
+git branch watchboyDev
+git checkout watchboyDev
 
 #While developing:
-git add data/Watchman/Watchman.geo (or file that is to be committed)
+git add modified_file (file that is to be committed)
 
 #Commit often, commit, seriously.
 git commit
 
 #It’s showtime, push to my fork (Ben and Andy)
-git push fork MarcDev
+git push fork watchboyDev
 
 #After this is done, open pull request on github.
 
@@ -32,12 +32,12 @@ git commit —amend (overwrite last commit, in case of goof)
 
 # Example: To add new material:
 Modify data/MATERIAL.ratdb
-Modify data/OPTICS.ratdb
+git add data/MATERIAL.ratdb
 
 #To add geometry 
-Modify data/Watchman/Watchman.geo
+Modify data/Watchboy/Watchboy.geo
 
-git add data/Watchman/Watchman.geo
+git add data/Watchboy/Watchboy.geo
 
 #Documentation 
 
