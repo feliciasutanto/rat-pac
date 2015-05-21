@@ -103,7 +103,6 @@ color: [0.0, 0.0, 1.0, 0.1],
 drawstyle: "solid"
 }
 
-<<<<<<< HEAD
 {
 name: "GEO",
 index: "calibTube",
@@ -136,10 +135,7 @@ color: [0.0, 1.0, 1.0, 0.1],
 drawstyle: "solid"
 }
 
-
-=======
->>>>>>> a481e2bff9467ccb89dbe3226239c74ec0ef8df1
-{ 
+{
 name: "GEO", 
 index: "inner_pmts", 
 enable: 1,
