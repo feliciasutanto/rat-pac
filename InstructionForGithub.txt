@@ -17,6 +17,9 @@ git checkout watchboyDev
 #While developing:
 git add modified_file (file that is to be committed)
 
+#See what files have been modified and what should be included 
+git status 
+
 #Commit often, commit, seriously.
 git commit
 
@@ -36,6 +39,8 @@ git add data/MATERIAL.ratdb
 
 #To add geometry 
 Modify data/Watchboy/Watchboy.geo
+
+
 
 git add data/Watchboy/Watchboy.geo
 
