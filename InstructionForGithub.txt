@@ -30,15 +30,15 @@ git push fork MarcDev
 #If you mess up with the commit. Make changes. Unstage file
 git commit —amend (overwrite last commit, in case of goof)
 
-# To add new material:
+# Example: To add new material:
 Modify data/MATERIAL.ratdb
 Modify data/OPTICS.ratdb
 
 #To add geometry 
 Modify data/Watchman/Watchman.geo
 
-# Type refers to a geobuilder factory that create the G4Objects
 
+git add 
 
 http://rat.readthedocs.org/en/latest/
 
