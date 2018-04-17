@@ -102,7 +102,7 @@ type: "tube",
 r_max: 748.3,
 size_z: 507.0,
 position: [0.0, 0.0, 0.0],
-material: "doped_water_12",
+material: "doped_water_24",
 color: [0.0, 1.0, 0.0, 0.1],
 drawstyle: "solid"
 }
@@ -117,7 +117,7 @@ type: "tube",
 r_max: 749.3,
 size_z: 635.0,
 position: [0.0, 0.0, 0.0],
-material: "ptfe_90",
+material: "ptfe_80",
 color: [0.0, 0.0, 1.0, 0.1],
 drawstyle: "solid",
 invisible: 1
@@ -151,7 +151,7 @@ type: "tube",
 r_max: 748.3,
 size_z: 634.0,
 position: [0.0, 0.0, 0.0],
-material: "doped_water_12",
+material: "doped_water_24",
 color: [0.0, 0.0, 1.0, 0.1],
 drawstyle: "solid"
 }
@@ -169,7 +169,7 @@ type: "border",
 volume1: "mid_water",
 volume2: "reflectiveTeflon",
 reverse: 0, //0 only considers photons from a->b, 1 does both directions
-surface: "ptfe_90",
+surface: "ptfe_80",
 }
 
 {
@@ -185,7 +185,7 @@ mu_metal: 1,
 pmt_detector_type: "idpmt",
 sensitive_detector: "/mydet/pmt/inner",
 //3sign
-efficiency_correction: 5.000000e-01 ,
+efficiency_correction: 6.800000e-01 ,
 pos_table: "PMTINFO_inner",
 orientation: "manual",
 }
@@ -203,7 +203,7 @@ mu_metal: 1,
 pmt_detector_type: "idpmt",
 sensitive_detector: "/mydet/pmt/inner",
 //3sign
-efficiency_correction: 5.000000e-01 ,
+efficiency_correction: 6.800000e-01 ,
 pos_table: "PMTINFO_innerveto",
 orientation: "manual",
 }
@@ -221,7 +221,7 @@ mu_metal: 1,
 pmt_detector_type: "idpmt",
 sensitive_detector: "/mydet/pmt/veto",
 //3sign
-efficiency_correction: 5.000000e-01 ,
+efficiency_correction: 6.800000e-01 ,
 pos_table: "PMTINFO_outerveto",
 orientation: "manual",
 }
