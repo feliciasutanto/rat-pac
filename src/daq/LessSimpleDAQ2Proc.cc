@@ -46,9 +46,9 @@ namespace RAT {
                     tArraySort.push_back(mcpmt->GetMCPhoton(i)->GetFrontEndTime());
                     qArray.push_back(mcpmt->GetMCPhoton(i)->GetCharge());
                     idArray.push_back(mcpmt->GetID());
-                    iArray.push_back(i);
                     phArray.push_back(mcpmt->GetMCPhotonCount());
                     htArray.push_back(mcpmt->GetMCPhoton(i)->GetHitTime());
+                    
                 }
             }
         }
@@ -59,7 +59,10 @@ namespace RAT {
         //create iArraySort to keep track of the indexes
         for( unsigned long q = 0 ; q < tArraySort.size() ; q++ ){
             for( unsigned long qq = 0 ; qq < tArray.size() ; qq++ ){
-                if(tArraySort[q] == tArray[qq]){  iArraySort.push_back(  iArray[qq]  );  }
+                if(tArraySort[q] == tArray[qq]){
+                    iArraySort.push_back(  qq  );
+                    break;
+                }
             }
         }
         
@@ -96,6 +99,9 @@ namespace RAT {
             }
             
             //ok, we have the number of subevents now (numSub+1). Let's set things up!
+            vector <double> idGroup, tGroup, qGroup;
+            bool            itsThere;
+            int             goHere;
             double qSum = 0.0;
             for( int b = 0; b < numSub+1 ; b++ ){
                 
@@ -111,17 +117,49 @@ namespace RAT {
                 for( unsigned long bb = startIndex[b] ; bb < tArraySort.size() ; bb++ ){
                     if  ( subIndex[bb] == b   ){
                         
-                        pmt = ev->AddNewPMT();
-                        pmt->SetID    (  idArraySort[bb]   );
-                        pmt->SetTime  (  tArraySort [bb]   );
-                        pmt->SetCharge(  qArraySort [bb]   );
+                        //we need to group the PMT
+                        //is this pmt is already in the vector?
+                        itsThere = false;
+                        for(unsigned long cc = 0 ; cc < idGroup.size() ; cc++ ){
+                            if( idArraySort[bb] == idGroup[cc] ){
+                                itsThere = true;
+                                goHere = cc;
+                                break;
+                            }
+                        }
+                        
+                        if( itsThere ){
+                            
+                            //if the PMT is already in the vector, the find its friend
+                            qGroup[ goHere ] += qArraySort [bb];
+                        }
+                        else{
+                            
+                            //if the PMT is not in the vector yet, add it to the vector
+                            idGroup.push_back(   idArraySort[bb]   );
+                            tGroup.push_back (   tArraySort [bb]   );
+                            qGroup.push_back (   qArraySort [bb]   );
+                            
+                        }
                         
                         qSum += qArraySort[bb];
+                        
                     }
                     else{
                         break;
                     }
                 }
+                
+                //we can then set this event on the PMT
+                for( unsigned long dd = 0 ; dd < idGroup.size() ; dd++ ){
+                    pmt = ev->AddNewPMT();
+                    pmt->SetID    (  idGroup[dd]   );
+                    pmt->SetTime  (  tGroup [dd]   );
+                    pmt->SetCharge(  qGroup [dd]   );
+                }
+                
+                idGroup.resize(0); tGroup.resize(0); qGroup.resize(0);
+                
                 ev->SetTotalCharge(   qSum   );
             }
         }
