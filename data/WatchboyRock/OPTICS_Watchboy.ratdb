@@ -1518,6 +1518,26 @@ PROPERTY_LIST: ["REFLECTIVITY", "ABSLENGTH", ]
 {
 // Marc Bergevin: You can set the reflectivity of the wall in REFLECTIVITY_value2
 name: "OPTICS",
+index: "ptfe_805",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+surface: 1,
+finish: "ground",
+model: "glisur",
+type: "dielectric_metal",
+polish: 0.01,
+REFLECTIVITY_option: "wavelength",
+REFLECTIVITY_value1: [60.0, 100.0, 250.0, 400.0, 1500.0, 2200.0, ],
+REFLECTIVITY_value2: [0.0, 0.0, 8.050000e-01 , 8.050000e-01 , 8.050000e-01 , 8.050000e-01 , ],
+ABSLENGTH_option: "wavelength",
+ABSLENGTH_value1: [60.0, 800.0, ],
+ABSLENGTH_value2: [1.0e-3, 1.0e-3, ],
+PROPERTY_LIST: ["REFLECTIVITY", "ABSLENGTH", ]
+}
+
+{
+// Marc Bergevin: You can set the reflectivity of the wall in REFLECTIVITY_value2
+name: "OPTICS",
 index: "ptfe_810",
 valid_begin : [0, 0],
 valid_end : [0, 0],
@@ -1529,6 +1549,26 @@ polish: 0.01,
 REFLECTIVITY_option: "wavelength",
 REFLECTIVITY_value1: [60.0, 100.0, 250.0, 400.0, 1500.0, 2200.0, ],
 REFLECTIVITY_value2: [0.0, 0.0, 8.100000e-01 , 8.100000e-01 , 8.100000e-01 , 8.100000e-01 , ],
+ABSLENGTH_option: "wavelength",
+ABSLENGTH_value1: [60.0, 800.0, ],
+ABSLENGTH_value2: [1.0e-3, 1.0e-3, ],
+PROPERTY_LIST: ["REFLECTIVITY", "ABSLENGTH", ]
+}
+
+{
+// Marc Bergevin: You can set the reflectivity of the wall in REFLECTIVITY_value2
+name: "OPTICS",
+index: "ptfe_815",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+surface: 1,
+finish: "ground",
+model: "glisur",
+type: "dielectric_metal",
+polish: 0.01,
+REFLECTIVITY_option: "wavelength",
+REFLECTIVITY_value1: [60.0, 100.0, 250.0, 400.0, 1500.0, 2200.0, ],
+REFLECTIVITY_value2: [0.0, 0.0, 8.150000e-01 , 8.150000e-01 , 8.150000e-01 , 8.150000e-01 , ],
 ABSLENGTH_option: "wavelength",
 ABSLENGTH_value1: [60.0, 800.0, ],
 ABSLENGTH_value2: [1.0e-3, 1.0e-3, ],
@@ -1558,6 +1598,26 @@ PROPERTY_LIST: ["REFLECTIVITY", "ABSLENGTH", ]
 {
 // Marc Bergevin: You can set the reflectivity of the wall in REFLECTIVITY_value2
 name: "OPTICS",
+index: "ptfe_825",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+surface: 1,
+finish: "ground",
+model: "glisur",
+type: "dielectric_metal",
+polish: 0.01,
+REFLECTIVITY_option: "wavelength",
+REFLECTIVITY_value1: [60.0, 100.0, 250.0, 400.0, 1500.0, 2200.0, ],
+REFLECTIVITY_value2: [0.0, 0.0, 8.250000e-01 , 8.250000e-01 , 8.250000e-01 , 8.250000e-01 , ],
+ABSLENGTH_option: "wavelength",
+ABSLENGTH_value1: [60.0, 800.0, ],
+ABSLENGTH_value2: [1.0e-3, 1.0e-3, ],
+PROPERTY_LIST: ["REFLECTIVITY", "ABSLENGTH", ]
+}
+
+{
+// Marc Bergevin: You can set the reflectivity of the wall in REFLECTIVITY_value2
+name: "OPTICS",
 index: "ptfe_830",
 valid_begin : [0, 0],
 valid_end : [0, 0],
@@ -1569,6 +1629,26 @@ polish: 0.01,
 REFLECTIVITY_option: "wavelength",
 REFLECTIVITY_value1: [60.0, 100.0, 250.0, 400.0, 1500.0, 2200.0, ],
 REFLECTIVITY_value2: [0.0, 0.0, 8.300000e-01 , 8.300000e-01 , 8.300000e-01 , 8.300000e-01 , ],
+ABSLENGTH_option: "wavelength",
+ABSLENGTH_value1: [60.0, 800.0, ],
+ABSLENGTH_value2: [1.0e-3, 1.0e-3, ],
+PROPERTY_LIST: ["REFLECTIVITY", "ABSLENGTH", ]
+}
+
+{
+// Marc Bergevin: You can set the reflectivity of the wall in REFLECTIVITY_value2
+name: "OPTICS",
+index: "ptfe_835",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+surface: 1,
+finish: "ground",
+model: "glisur",
+type: "dielectric_metal",
+polish: 0.01,
+REFLECTIVITY_option: "wavelength",
+REFLECTIVITY_value1: [60.0, 100.0, 250.0, 400.0, 1500.0, 2200.0, ],
+REFLECTIVITY_value2: [0.0, 0.0, 8.350000e-01 , 8.350000e-01 , 8.350000e-01 , 8.350000e-01 , ],
 ABSLENGTH_option: "wavelength",
 ABSLENGTH_value1: [60.0, 800.0, ],
 ABSLENGTH_value2: [1.0e-3, 1.0e-3, ],
@@ -1598,6 +1678,26 @@ PROPERTY_LIST: ["REFLECTIVITY", "ABSLENGTH", ]
 {
 // Marc Bergevin: You can set the reflectivity of the wall in REFLECTIVITY_value2
 name: "OPTICS",
+index: "ptfe_845",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+surface: 1,
+finish: "ground",
+model: "glisur",
+type: "dielectric_metal",
+polish: 0.01,
+REFLECTIVITY_option: "wavelength",
+REFLECTIVITY_value1: [60.0, 100.0, 250.0, 400.0, 1500.0, 2200.0, ],
+REFLECTIVITY_value2: [0.0, 0.0, 8.450000e-01 , 8.450000e-01 , 8.450000e-01 , 8.450000e-01 , ],
+ABSLENGTH_option: "wavelength",
+ABSLENGTH_value1: [60.0, 800.0, ],
+ABSLENGTH_value2: [1.0e-3, 1.0e-3, ],
+PROPERTY_LIST: ["REFLECTIVITY", "ABSLENGTH", ]
+}
+
+{
+// Marc Bergevin: You can set the reflectivity of the wall in REFLECTIVITY_value2
+name: "OPTICS",
 index: "ptfe_850",
 valid_begin : [0, 0],
 valid_end : [0, 0],
@@ -1609,6 +1709,26 @@ polish: 0.01,
 REFLECTIVITY_option: "wavelength",
 REFLECTIVITY_value1: [60.0, 100.0, 250.0, 400.0, 1500.0, 2200.0, ],
 REFLECTIVITY_value2: [0.0, 0.0, 8.500000e-01 , 8.500000e-01 , 8.500000e-01 , 8.500000e-01 , ],
+ABSLENGTH_option: "wavelength",
+ABSLENGTH_value1: [60.0, 800.0, ],
+ABSLENGTH_value2: [1.0e-3, 1.0e-3, ],
+PROPERTY_LIST: ["REFLECTIVITY", "ABSLENGTH", ]
+}
+
+{
+// Marc Bergevin: You can set the reflectivity of the wall in REFLECTIVITY_value2
+name: "OPTICS",
+index: "ptfe_855",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+surface: 1,
+finish: "ground",
+model: "glisur",
+type: "dielectric_metal",
+polish: 0.01,
+REFLECTIVITY_option: "wavelength",
+REFLECTIVITY_value1: [60.0, 100.0, 250.0, 400.0, 1500.0, 2200.0, ],
+REFLECTIVITY_value2: [0.0, 0.0, 8.550000e-01 , 8.550000e-01 , 8.550000e-01 , 8.550000e-01 , ],
 ABSLENGTH_option: "wavelength",
 ABSLENGTH_value1: [60.0, 800.0, ],
 ABSLENGTH_value2: [1.0e-3, 1.0e-3, ],
@@ -1638,6 +1758,26 @@ PROPERTY_LIST: ["REFLECTIVITY", "ABSLENGTH", ]
 {
 // Marc Bergevin: You can set the reflectivity of the wall in REFLECTIVITY_value2
 name: "OPTICS",
+index: "ptfe_865",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+surface: 1,
+finish: "ground",
+model: "glisur",
+type: "dielectric_metal",
+polish: 0.01,
+REFLECTIVITY_option: "wavelength",
+REFLECTIVITY_value1: [60.0, 100.0, 250.0, 400.0, 1500.0, 2200.0, ],
+REFLECTIVITY_value2: [0.0, 0.0, 8.650000e-01 , 8.650000e-01 , 8.650000e-01 , 8.650000e-01 , ],
+ABSLENGTH_option: "wavelength",
+ABSLENGTH_value1: [60.0, 800.0, ],
+ABSLENGTH_value2: [1.0e-3, 1.0e-3, ],
+PROPERTY_LIST: ["REFLECTIVITY", "ABSLENGTH", ]
+}
+
+{
+// Marc Bergevin: You can set the reflectivity of the wall in REFLECTIVITY_value2
+name: "OPTICS",
 index: "ptfe_870",
 valid_begin : [0, 0],
 valid_end : [0, 0],
@@ -1649,6 +1789,26 @@ polish: 0.01,
 REFLECTIVITY_option: "wavelength",
 REFLECTIVITY_value1: [60.0, 100.0, 250.0, 400.0, 1500.0, 2200.0, ],
 REFLECTIVITY_value2: [0.0, 0.0, 8.700000e-01 , 8.700000e-01 , 8.700000e-01 , 8.700000e-01 , ],
+ABSLENGTH_option: "wavelength",
+ABSLENGTH_value1: [60.0, 800.0, ],
+ABSLENGTH_value2: [1.0e-3, 1.0e-3, ],
+PROPERTY_LIST: ["REFLECTIVITY", "ABSLENGTH", ]
+}
+
+{
+// Marc Bergevin: You can set the reflectivity of the wall in REFLECTIVITY_value2
+name: "OPTICS",
+index: "ptfe_875",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+surface: 1,
+finish: "ground",
+model: "glisur",
+type: "dielectric_metal",
+polish: 0.01,
+REFLECTIVITY_option: "wavelength",
+REFLECTIVITY_value1: [60.0, 100.0, 250.0, 400.0, 1500.0, 2200.0, ],
+REFLECTIVITY_value2: [0.0, 0.0, 8.750000e-01 , 8.750000e-01 , 8.750000e-01 , 8.750000e-01 , ],
 ABSLENGTH_option: "wavelength",
 ABSLENGTH_value1: [60.0, 800.0, ],
 ABSLENGTH_value2: [1.0e-3, 1.0e-3, ],
@@ -1678,6 +1838,26 @@ PROPERTY_LIST: ["REFLECTIVITY", "ABSLENGTH", ]
 {
 // Marc Bergevin: You can set the reflectivity of the wall in REFLECTIVITY_value2
 name: "OPTICS",
+index: "ptfe_885",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+surface: 1,
+finish: "ground",
+model: "glisur",
+type: "dielectric_metal",
+polish: 0.01,
+REFLECTIVITY_option: "wavelength",
+REFLECTIVITY_value1: [60.0, 100.0, 250.0, 400.0, 1500.0, 2200.0, ],
+REFLECTIVITY_value2: [0.0, 0.0, 8.850000e-01 , 8.850000e-01 , 8.850000e-01 , 8.850000e-01 , ],
+ABSLENGTH_option: "wavelength",
+ABSLENGTH_value1: [60.0, 800.0, ],
+ABSLENGTH_value2: [1.0e-3, 1.0e-3, ],
+PROPERTY_LIST: ["REFLECTIVITY", "ABSLENGTH", ]
+}
+
+{
+// Marc Bergevin: You can set the reflectivity of the wall in REFLECTIVITY_value2
+name: "OPTICS",
 index: "ptfe_890",
 valid_begin : [0, 0],
 valid_end : [0, 0],
@@ -1689,6 +1869,26 @@ polish: 0.01,
 REFLECTIVITY_option: "wavelength",
 REFLECTIVITY_value1: [60.0, 100.0, 250.0, 400.0, 1500.0, 2200.0, ],
 REFLECTIVITY_value2: [0.0, 0.0, 8.900000e-01 , 8.900000e-01 , 8.900000e-01 , 8.900000e-01 , ],
+ABSLENGTH_option: "wavelength",
+ABSLENGTH_value1: [60.0, 800.0, ],
+ABSLENGTH_value2: [1.0e-3, 1.0e-3, ],
+PROPERTY_LIST: ["REFLECTIVITY", "ABSLENGTH", ]
+}
+
+{
+// Marc Bergevin: You can set the reflectivity of the wall in REFLECTIVITY_value2
+name: "OPTICS",
+index: "ptfe_895",
+valid_begin : [0, 0],
+valid_end : [0, 0],
+surface: 1,
+finish: "ground",
+model: "glisur",
+type: "dielectric_metal",
+polish: 0.01,
+REFLECTIVITY_option: "wavelength",
+REFLECTIVITY_value1: [60.0, 100.0, 250.0, 400.0, 1500.0, 2200.0, ],
+REFLECTIVITY_value2: [0.0, 0.0, 8.950000e-01 , 8.950000e-01 , 8.950000e-01 , 8.950000e-01 , ],
 ABSLENGTH_option: "wavelength",
 ABSLENGTH_value1: [60.0, 800.0, ],
 ABSLENGTH_value2: [1.0e-3, 1.0e-3, ],
