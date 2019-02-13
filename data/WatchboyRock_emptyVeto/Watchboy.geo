@@ -5,6 +5,21 @@ valid_begin: [0, 0],
 valid_end: [0, 0],
 mother: "",
 type: "sphere",
+r_max: 7000.0,
+position: [0.0, 0.0, 0.0],
+material: "rock",
+color: [1.0, 0.0, 0.0, 0.1],
+drawstyle: "solid",
+invisible: 1
+}
+
+{
+name: "GEO",
+index: "world_air",
+valid_begin: [0, 0],
+valid_end: [0, 0],
+mother: "world",
+type: "sphere",
 r_max: 6000.0,
 position: [0.0, 0.0, 0.0],
 material: "air",
@@ -18,7 +33,7 @@ name: "GEO",
 index: "theGround",
 valid_begin: [0, 0],
 valid_end: [0, 0],
-mother: "world",
+mother: "world_air",
 type: "sphere",
 r_max: 6000.0,
 theta_start: 90.0,
@@ -37,7 +52,7 @@ name: "GEO",
 index: "tank", //this is the tank
 valid_begin: [0, 0],
 valid_end: [0, 0],
-mother: "world",
+mother: "world_air",
 type: "tube",
 r_max: 1980.2,
 size_z: 1651.2,
@@ -72,7 +87,7 @@ type: "tube",
 r_max: 1980.0,
 size_z: 1651.0,
 position: [0.0, 0.0, 0.0],
-material: "water",
+material: "air", //"water",
 color: [1.0, 0.0, 0.0, 0.0],
 drawstyle: "solid"
 }
@@ -102,7 +117,7 @@ type: "tube",
 r_max: 748.3,
 size_z: 507.0,
 position: [0.0, 0.0, 0.0],
-material: "doped_water_24",
+material: "air", //"doped_water_24",
 color: [0.0, 1.0, 0.0, 0.1],
 drawstyle: "solid"
 }
@@ -169,7 +184,7 @@ type: "border",
 volume1: "mid_water",
 volume2: "reflectiveTeflon",
 reverse: 0, //0 only considers photons from a->b, 1 does both directions
-surface: "ptfe_900",
+surface: "ptfe_80",
 }
 
 {
