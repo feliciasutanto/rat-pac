@@ -88,6 +88,9 @@
 #include <fstream>
 #include <iostream>
 #include <cmath>
+#include <unistd.h>
+#include <stdio.h>
+#include <limits.h>
 #define PI 3.14159265358979312
 #define DEBUGGING 0
 #define G4std  std
@@ -185,11 +188,12 @@ namespace RAT {
         char inputLine[10000];
         
         FILE *infile;
-        if ((infile=fopen("muint-davis-mr-new.dat","r")) == NULL){
+        if ((infile=fopen("/Users/feliciasutanto/Documents/software/rat-pac/src/gen/muint-davis-mr-new.dat","r")) == NULL){
             G4cout << "Error: Cannot find the muint-davis-mr-new.dat file" << G4endl;
         }
-        ifstream file3( "muint-davis-mr-new.dat", std::ios::in );
+        ifstream file3( "/Users/feliciasutanto/Documents/software/rat-pac/src/gen/muint-davis-mr-new.dat", std::ios::in );
         while( file3.good() ) {
+            
             file3.getline( inputLine, 9999 );
             char *token;
             token = strtok( inputLine, " " );
@@ -205,7 +209,7 @@ namespace RAT {
         }
         file3.close();
         
-        ifstream file2( "musp-davis-mr-new.dat", std::ios::binary|std::ios::in );
+        ifstream file2( "/Users/feliciasutanto/Documents/software/rat-pac/src/gen/musp-davis-mr-new.dat", std::ios::binary|std::ios::in );
         int i1 = 0, i2 = 0, i3 = 0;
         int nEBins     = 121;
         int nDepBins   = 62;
@@ -233,7 +237,7 @@ namespace RAT {
                     spmu[i][j][k] = spmu[i+1][j][k];
         spmu[1][1][0] = 0.000853544;
         
-        ifstream file1( "depth-davis-mr-new.dat", std::ios::in );
+        ifstream file1( "/Users/feliciasutanto/Documents/software/rat-pac/src/gen/depth-davis-mr-new.dat", std::ios::in );
         lineNumber = index = 0;
         while( file1.good() ) {
             file1.getline( inputLine, 9999 );
@@ -510,6 +514,51 @@ namespace RAT {
         
         return;
         
+    }
+    
+    /////////////////////////////////////////////
+    //Set State- Idk why I have this routine..
+    /////////////////////////////////////////////
+    
+    void VertexGen_Muon::SetState(G4String newValues)
+    {
+        newValues = util_strip_default(newValues); // from GLG4StringUtil
+        
+        if (newValues.length() == 0) {
+            
+            // print help and current state
+            G4cout << "Current state of this VertexGen_ES:\n"
+            << " \"" << GetState() << "\"\n" << G4endl;
+            G4cout << "Format of argument to VertexGen_ES::SetState: \n"
+            " \"nu_dir_x nu_dir_y nu_dir_z\"\n"
+            " where nu_dir is the initial direction of the reactor antineutrino.\n"
+            " Does not have to be normalized.  Set to \"0. 0. 0.\" for isotropic\n"
+            " neutrino direction."
+            << G4endl;
+            return;
+        }
+        
+        std::istringstream is(newValues.c_str());
+        double x, y, z;
+        is >> x >> y >> z;
+        if (is.fail()) return;
+        if ( x == 0. && y == 0. && z == 0. ) nu_dir.set(0., 0., 0.);
+        else nu_dir = G4ThreeVector(x, y, z).unit();
+        
+    }
+    
+    /////////////////////////////////////////////
+    //Get State- Not sure why I need this as well
+    /////////////////////////////////////////////
+    
+    G4String VertexGen_Muon::GetState()
+    {
+        std::ostringstream os;
+        
+        os << nu_dir.x() << "\t" << nu_dir.y() << "\t" << nu_dir.z() << std::ends;
+        
+        G4String rv(os.str());
+        return rv;
     }
     
     

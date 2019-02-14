@@ -15,6 +15,7 @@
 #include <RAT/VertexGen_ReacIBD.hh>
 #include <RAT/VertexGen_Isotope.hh>
 #include <RAT/VertexGen_FastNeutron.hh>
+#include <RAT/VertexGen_Muon.hh>
 #include <RAT/VertexGen_ES.hh>
 #include <RAT/VertexGen_Spectrum.hh>
 #include <RAT/VertexGen_SN.hh>
@@ -127,6 +128,9 @@ namespace RAT {
         GlobalFactory<GLG4VertexGen>::Register("fastneutron",
                                                new Alloc<GLG4VertexGen,
                                                VertexGen_FastNeutron>);
+        GlobalFactory<GLG4VertexGen>::Register("muon",
+                                               new Alloc<GLG4VertexGen,
+                                               VertexGen_Muon>);
         
         GlobalFactory<GLG4Gen>::Register("decaychain",
                                          new Alloc<GLG4Gen,DecayChain_Gen>);

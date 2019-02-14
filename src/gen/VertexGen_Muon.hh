@@ -20,6 +20,8 @@ namespace RAT {
         VertexGen_Muon( const char *arg_dbname = "muon" );
         virtual 		~VertexGen_Muon();
         virtual void 	GeneratePrimaryVertex( G4Event* argEvent,G4ThreeVector& dx,G4double dt);
+        virtual void 	SetState( G4String newValues ); //set the state for generator
+        virtual 		G4String GetState(); //return current state
         
     private:
         void CalculateMuonVariables();
@@ -59,6 +61,8 @@ namespace RAT {
         G4ParticleDefinition *n;
         
         //MuonMessenger* messenger;
+        G4ThreeVector nu_dir; //useless
+
     };
     
 } // namespace RAT
