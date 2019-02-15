@@ -60,6 +60,10 @@ namespace RAT {
         G4ParticleDefinition *gammaDef;
         G4ParticleDefinition *n;
         
+        std::string muintData;
+        std::string muspData;
+        std::string depthData;
+        
         //MuonMessenger* messenger;
         G4ThreeVector nu_dir; //useless
 

@@ -187,11 +187,16 @@ namespace RAT {
         int lineNumber = 0, index = 0;
         char inputLine[10000];
         
+        //get the directory to data file
+        std::string dataDir= (getenv("GLG4DATA"));
+        dataDir += "/";
+        
+        muintData = dataDir + "musun-muint-davis-mr-new.dat";
         FILE *infile;
-        if ((infile=fopen("/Users/feliciasutanto/Documents/software/rat-pac/src/gen/muint-davis-mr-new.dat","r")) == NULL){
+        if ((infile=fopen(muintData.c_str(),"r")) == NULL){
             G4cout << "Error: Cannot find the muint-davis-mr-new.dat file" << G4endl;
         }
-        ifstream file3( "/Users/feliciasutanto/Documents/software/rat-pac/src/gen/muint-davis-mr-new.dat", std::ios::in );
+        ifstream file3(muintData.c_str(), std::ios::in );
         while( file3.good() ) {
             
             file3.getline( inputLine, 9999 );
@@ -209,7 +214,8 @@ namespace RAT {
         }
         file3.close();
         
-        ifstream file2( "/Users/feliciasutanto/Documents/software/rat-pac/src/gen/musp-davis-mr-new.dat", std::ios::binary|std::ios::in );
+        muspData = dataDir + "musun-musp-davis-mr-new.dat";
+        ifstream file2( muspData.c_str(), std::ios::binary|std::ios::in );
         int i1 = 0, i2 = 0, i3 = 0;
         int nEBins     = 121;
         int nDepBins   = 62;
@@ -237,7 +243,8 @@ namespace RAT {
                     spmu[i][j][k] = spmu[i+1][j][k];
         spmu[1][1][0] = 0.000853544;
         
-        ifstream file1( "/Users/feliciasutanto/Documents/software/rat-pac/src/gen/depth-davis-mr-new.dat", std::ios::in );
+        depthData = dataDir + "musun-depth-davis-mr-new.dat";
+        ifstream file1( depthData.c_str() , std::ios::in );
         lineNumber = index = 0;
         while( file1.good() ) {
             file1.getline( inputLine, 9999 );
