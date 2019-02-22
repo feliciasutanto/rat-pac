@@ -31,7 +31,6 @@ namespace RAT {
         int nSubEvents = 0;
         double timeWindow  = 800., oldGroup;
         
-        
         // First part is to load into vector PMT information for full event
         vector <double> timeAndChargeAndID;
         vector<vector <double> > pmtARRAY;
@@ -92,7 +91,13 @@ namespace RAT {
         
         timeTmp = 0.;
         int oldID = -1;
+        
+        vector <double> idGroup, tGroup, qGroup;
+        bool itsThere;
+        int goHere;
+        
         for (int kk = 0; kk<nSubEvents; kk++) {
+            
             DS::EV *ev = ds->AddNewEV();
             DS::PMT* pmt;
             
@@ -108,31 +113,71 @@ namespace RAT {
             ev->SetCalibratedTriggerTime((clusterTime[kk]));
             ev->SetID(kk);//fEventCounter
             //            ev->SetUniqueID(fEventCounter);
+            
             fEventCounter+=1;
             oldID = -1, totalQ = 0.0, pmtQ = 0.0;
+            
             for (unsigned long pmtIndex = 0; pmtIndex < pmtARRAY.size(); pmtIndex++) {
+                
                 time = pmtARRAY[pmtIndex][0];
+                
                 if (fabs(time-clusterTime[kk]) <400) {
-                    if (pmtARRAY[pmtIndex][2] != oldID){
-                        timeTmp = time;
-                        pmt = ev->AddNewPMT();
-                        pmt->SetID(int(pmtARRAY[pmtIndex][2]));
-                        pmtQ = 0.0;
+                    
+                    /*if (pmtARRAY[pmtIndex][2] != oldID){
+                     timeTmp = time;
+                     pmt = ev->AddNewPMT();
+                     pmt->SetID(int(pmtARRAY[pmtIndex][2]));
+                     pmtQ = 0.0;
+                     }
+                     
+                     pmtQ += pmtARRAY[pmtIndex][1];
+                     totalQ += pmtARRAY[pmtIndex][1];
+                     
+                     //Set an offset of 200 ns for the PMT time and have a relative PMT time
+                     // Removed offset
+                     pmt->SetTime(timeTmp-clusterTime[kk]);
+                     pmt->SetCharge(pmtQ);
+                     oldID = pmtARRAY[pmtIndex][2];*/
+                    
+                    //check if the pmt id has existed within a group of subevent
+                    itsThere = false;
+                    for(unsigned long cc = 0 ; cc < idGroup.size() ; cc++ ){
+                        if( pmtARRAY[pmtIndex][2] == idGroup[cc] ){
+                            itsThere = true;
+                            goHere = cc; break;
+                        }
                     }
                     
-                    pmtQ += pmtARRAY[pmtIndex][1];
+                    //if the PMT is already in the vector, the find its friend
+                    if( itsThere ){ qGroup[ goHere ] += pmtARRAY[pmtIndex][1]; }
+                    
+                    //if the PMT is not in the vector yet, add it to the vector
+                    else{
+                        idGroup.push_back( pmtARRAY[pmtIndex][2] );
+                        tGroup.push_back ( pmtARRAY[pmtIndex][0] );
+                        qGroup.push_back ( pmtARRAY[pmtIndex][1] );
+                    }
+                    
+                    //accumulate total q within one subevent
                     totalQ += pmtARRAY[pmtIndex][1];
-                    
-                    //Set an offset of 200 ns for the PMT time and have a relative PMT time
-                    // Removed offset
-                    pmt->SetTime(timeTmp-clusterTime[kk]);
-                    pmt->SetCharge(pmtQ);
-                    oldID = pmtARRAY[pmtIndex][2];
-                    
                 }
             }
+            
+            //we can then set these events on the PMT for one subevent
+            for( unsigned long dd = 0 ; dd < idGroup.size() ; dd++ ){
+                pmt = ev->AddNewPMT();
+                pmt->SetID    (  idGroup[dd]   );
+                pmt->SetTime  (  tGroup [dd]   );
+                pmt->SetCharge(  qGroup [dd]   );
+            }
+            
+            //resize all vectors for the next subevent
+            idGroup.resize(0); tGroup.resize(0); qGroup.resize(0);
+            
+            //regster total charge of one subevent
             ev->SetTotalCharge(totalQ);
         }
+        
         return Processor::OK;
     }
     
